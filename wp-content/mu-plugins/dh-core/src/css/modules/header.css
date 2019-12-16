@@ -1,0 +1,64 @@
+/* Main Menu */
+
+.main-menu {
+	@apply hidden;
+}
+
+.search-icon {
+  @apply absolute left-0 ml-2 text-brand-indigo;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header .search-submit {
+  @apply hidden;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+	@apply relative flex items-center ml-2;
+	height: 14px;
+	width: 14px;
+	display: inherit;
+}
+
+.menu-toggle:active,
+.menu-toggle:focus {
+	@apply outline-none;
+}
+
+.menu-toggle > span {
+	@apply bg-white block absolute w-full opacity-100 right-0 rounded-full -mt-px;
+	height: 2px;
+	top: 50%;
+	transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.menu-toggle > span:first-child {
+	transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+	transform: translateY(-4px) rotate(0deg);
+}
+
+.menu-toggle > span:last-child {
+	transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+	transform: translateY(4px) rotate(0deg);
+}
+
+[data-menu-open='true'] .menu-toggle > span {
+	@apply opacity-0;
+}
+[data-menu-open='true'] .menu-toggle > span:first-child {
+	@apply opacity-100;
+	width: 70%;
+	background-color: $primary;
+	transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+	transform: translateY(-50%) rotate(45deg);
+}
+
+[data-menu-open='true'] .menu-toggle > span:last-child {
+	@apply opacity-100;
+	width: 70%;
+	background-color: $primary;
+	transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);
+	transform: translateY(-50%) rotate(-45deg);
+}

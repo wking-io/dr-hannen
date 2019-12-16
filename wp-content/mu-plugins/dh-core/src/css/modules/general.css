@@ -1,0 +1,78 @@
+.general-content > p {
+	@apply mb-6 leading-relaxed;
+}
+
+.general-content h2,
+.general-content h3,
+.general-content h4 {
+	@apply pb-6 pt-8 font-bold;
+}
+
+.general-content h2 {
+	@apply text-2xl;
+}
+
+.general-content blockquote {
+	@apply pl-6 py-1 border-l-2 border-grey-500 mb-6;
+}
+
+.general-content blockquote > p {
+	@apply text-lg leading-relaxed mb-3;
+}
+
+.general-content blockquote > cite {
+	@apply font-bold not-italic;
+}
+
+.general-content ul {
+	@apply list-disc ml-8 mb-8;
+}
+
+.general-content ol {
+	@apply list-decimal ml-8 mb-8;
+}
+
+.general-content li {
+	@apply mb-4;
+}
+
+.general-content img {
+	@apply w-full;
+}
+
+.general-content .wp-block-image .alignleft,
+.general-content .wp-block-image .alignright {
+	@apply float-none m-0 mb-8;
+}
+
+@screen sm {
+	.general-content blockquote > p {
+		@apply text-xl;
+	}
+}
+
+@screen md {
+	.general-content h2 {
+		@apply text-3xl;
+	}
+
+	.general-content h3 {
+		@apply text-2xl;
+	}
+
+	.general-content h4 {
+		@apply text-xl;
+	}
+
+	.general-content > p {
+		@apply text-lg;
+	}
+
+	.general-content .wp-block-image .alignleft {
+		@apply float-left w-1/2 m-8 ml-0;
+	}
+
+	.general-content .wp-block-image .alignright {
+		@apply float-right w-1/2 m-8 mr-0;
+	}
+}
