@@ -1,8 +1,8 @@
 <?php ?>
 
-<form role="search" method="get" class="flex items-center" action="<?php echo home_url( '/' ); ?>">
+<form role="search" method="get" class="search-form flex items-center relative z-50" action="<?php echo home_url( '/' ); ?>">
     <input type="hidden" value="post" name="post_type" id="post_type" />
-    <label class="relative">
+    <label class="relative block">
         <span class="visually-hidden"><?php echo _x( 'Search for:', 'label' ) ?></span>
         <span class="search-icon">
             <svg class="fill-current" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">

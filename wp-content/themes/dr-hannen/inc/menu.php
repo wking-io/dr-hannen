@@ -7,9 +7,9 @@ class Main_Menu extends Walker_Nav_Menu {
 		$title = $item->title;
     $permalink = $item->url;
     $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-    $item_classes = array( 'pl-8' );
+    $item_classes = array( 'main-menu__item' );
 
-    $link_classes = array( 'text-white', 'hover:underline', 'menu-item-link', 'uppercase', 'font-medium', 'text-xs', 'md:text-2xl' );
+    $link_classes = array( 'text-white', 'hover:underline', 'menu-item-link', 'uppercase', 'font-bold', 'text-lg', 'sm:text-2xl' );
 
     $output .= '<li id="menu-item-' . esc_attr( $id ) . '" class="' . implode( " ", array_merge( $item_classes, $classes ) ) . '">';
     $output .= '<a class="' . implode( " ", $link_classes ) . '" id="menu-item-' . esc_attr( $id ) . '-link" href="' . esc_attr( $permalink ) . '">';
