@@ -14,6 +14,10 @@
 	@apply hidden;
 }
 
+.bg-patter .header .search-input {
+  @apply bg-white;
+}
+
 @screen md {
 	.header .search-form {
 		@apply block;
