@@ -1,17 +1,17 @@
 .search-icon {
-	@apply absolute left-0 ml-2 text-brand-indigo;
-	top: 50%;
-	transform: translateY(-50%);
+  @apply absolute left-0 ml-2 text-brand-indigo;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* Header Specific Search CSS */
 
 .header .search-form {
-	@apply hidden;
+  @apply hidden;
 }
 
 .header .search-submit {
-	@apply hidden;
+  @apply hidden;
 }
 
 .bg-patter .header .search-input {
@@ -19,7 +19,7 @@
 }
 
 @screen md {
-	.header .search-form {
-		@apply block;
-	}
+  .header .search-form {
+    @apply block;
+  }
 }
