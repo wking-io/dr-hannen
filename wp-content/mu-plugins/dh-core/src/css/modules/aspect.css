@@ -1,0 +1,63 @@
+@responsive {
+  .center-y {
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+  }
+
+  .center-x {
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+  }
+
+  .center-both {
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .aspect-none::before {
+    @apply hidden;
+  }
+
+  .aspect-16\:9,
+  .aspect-5\:3,
+  .aspect-4\:3 {
+    position: relative;
+  }
+
+  .aspect-16\:9::before,
+  .aspect-5\:3::before,
+  .aspect-4\:3::before {
+    content: "";
+    display: block;
+    width: 100%;
+  }
+
+  .aspect-16\:9::before {
+    padding-top: calc((9 / 16) * 100%);
+  }
+
+  .aspect-5\:3::before {
+    padding-top: calc((3 / 5) * 100%);
+  }
+
+  .aspect-4\:3::before {
+    padding-top: calc((3 / 4) * 100%);
+  }
+
+  .aspect-content-0 {
+    position: relative !important;
+  }
+
+  .aspect-content {
+    bottom: 0;
+    left: 0;
+    position: absolute !important;
+    right: 0;
+    top: 0;
+  }
+}

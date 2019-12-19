@@ -9,25 +9,26 @@ const paths = require('./paths');
 // Options for PostCSS as we reference these options twice
 // Adds vendor prefixing based on your specified browser support in
 // package.json
-const postcssOptions = isProduction => {
+const postcssOptions = (isProduction) => {
   const defaultOptions = [
     require('postcss-easy-import'),
     require('tailwindcss')(paths.tailwind),
     require('postcss-flexbugs-fixes'),
     autoprefixer({
-      flexbox: 'no-2009',
+      flexbox: 'no-2009'
     }),
+    require('postcss-hexrgba')
   ];
 
   return {
     // Necessary for external CSS imports to work
     ident: 'postcss',
-    plugins: [...defaultOptions, ...(isProduction ? [require('cssnano')] : [])],
+    plugins: [ ...defaultOptions, ...(isProduction ? [ require('cssnano') ] : []) ]
   };
 };
 
 const extractCSS = new MiniCssExtractPlugin({
-  filename: 'css/[name].css',
+  filename: 'css/[name].css'
 });
 
 // This is the production configuration.
@@ -43,7 +44,7 @@ module.exports = (_, { mode }) => {
     entry: paths.entry,
     output: {
       path: paths.build,
-      filename: 'js/[name].js',
+      filename: 'js/[name].js'
     },
     devtool: isProduction ? false : 'inline-source-map',
     module: {
@@ -52,8 +53,8 @@ module.exports = (_, { mode }) => {
         // Disable require.ensure as it's not a standard language feature.
         {
           parser: {
-            requireEnsure: false,
-          },
+            requireEnsure: false
+          }
         },
         {
           test: /\.(js|jsx|mjs)$/,
@@ -64,13 +65,13 @@ module.exports = (_, { mode }) => {
                 eslintPath: require.resolve('eslint'),
                 configFile: paths.eslint,
                 ignore: false,
-                useEslintrc: false,
+                useEslintrc: false
               },
-              loader: require.resolve('eslint-loader'),
-            },
+              loader: require.resolve('eslint-loader')
+            }
           ],
           include: paths.src,
-          exclude: [/[/\\\\]node_modules[/\\\\]/],
+          exclude: [ /[/\\\\]node_modules[/\\\\]/ ]
         },
         {
           // "oneOf" will traverse all following loaders until one will
@@ -91,14 +92,14 @@ module.exports = (_, { mode }) => {
                         {
                           modules: false,
                           targets: {
-                            browsers: ['last 2 versions', 'safari >= 7'],
-                          },
-                        },
-                      ],
-                    ],
-                  },
-                },
-              ],
+                            browsers: [ 'last 2 versions', 'safari >= 7' ]
+                          }
+                        }
+                      ]
+                    ]
+                  }
+                }
+              ]
             },
             {
               test: /\.css$/,
@@ -109,42 +110,42 @@ module.exports = (_, { mode }) => {
                   loader: require.resolve('css-loader'),
                   options: {
                     importLoaders: 2,
-                    url: false,
-                  },
+                    url: false
+                  }
                 },
                 {
                   loader: require.resolve('postcss-loader'),
-                  options: postcssOptions(isProduction),
-                },
-              ],
+                  options: postcssOptions(isProduction)
+                }
+              ]
             },
             {
               test: /\.(gif|png|jpe?g|svg)$/i,
               use: [
                 {
                   loader: require.resolve('file-loader'),
-                  options: { name: 'images/[name].[ext]' },
+                  options: { name: 'images/[name].[ext]' }
                 },
                 {
                   loader: require.resolve('image-webpack-loader'),
                   options: {
-                    disable: isProduction === false,
-                  },
-                },
-              ],
+                    disable: isProduction === false
+                  }
+                }
+              ]
             },
             {
               test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
               use: [
                 {
                   loader: require.resolve('file-loader'),
-                  options: { name: 'fonts/[name].[ext]' },
-                },
-              ],
-            },
-          ],
-        },
-      ],
+                  options: { name: 'fonts/[name].[ext]' }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     plugins: [
       new webpack.NamedModulesPlugin(),
@@ -154,7 +155,7 @@ module.exports = (_, { mode }) => {
       // solution that requires the user to opt into importing specific locales.
       // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
       // You can remove this if you don't use Moment.js:
-      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
     // Some libraries import Node modules but don't use them in the browser.
     // Tell Webpack to provide empty mocks for them so importing them works.
@@ -163,7 +164,7 @@ module.exports = (_, { mode }) => {
       fs: 'empty',
       net: 'empty',
       tls: 'empty',
-      child_process: 'empty',
-    },
+      child_process: 'empty'
+    }
   };
 };

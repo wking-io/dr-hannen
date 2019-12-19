@@ -8,9 +8,10 @@
 if ( ! function_exists( 'dh_scripts' ) ) :
 
 	function dh_scripts() {
-		
-		if ( is_home() ) :
-			wp_enqueue_script('dh_main');
+		wp_enqueue_script('dh_main');
+
+		if ( is_front_page() ) :
+			wp_enqueue_script('dh_home');
 		endif;
 
 	}
@@ -23,7 +24,11 @@ if ( ! function_exists( 'dh_styles' ) ) :
 
 	function dh_styles() {
 			wp_enqueue_style('dh_fonts', 'https://use.typekit.net/zpg4miq.css', false, 'all');
-	    wp_enqueue_style('dh_main');
+			wp_enqueue_style('dh_main');
+			
+			if ( is_front_page() ) :
+				wp_enqueue_style('dh_home');
+			endif;
 	}
 
 endif;

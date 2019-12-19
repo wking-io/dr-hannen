@@ -32,6 +32,8 @@ include 'inc/copyright.php';
 // Template functions
 include 'inc/templates.php';
 
-
 // Menu functions
 include 'inc/menu.php';
+
+// Cloudinary functions
+include 'inc/cloudinary.php';

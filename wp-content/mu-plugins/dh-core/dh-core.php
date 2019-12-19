@@ -128,6 +128,7 @@ class DhCore {
      */
     public function register_public_styles() {
       wp_register_style('dh_main', $this->get_asset_url( 'css/main.css' ), array(), '1.0.0' );
+      wp_register_style('dh_home', $this->get_asset_url( 'css/home.css' ), array(), '1.0.0' );
     }
 
     /**
@@ -139,6 +140,7 @@ class DhCore {
      */
     public function register_public_scripts() {
       wp_register_script('dh_main', $this->get_asset_url( 'js/main.js' ), array(), '1.0.0', true );
+      wp_register_script('dh_home', $this->get_asset_url( 'js/home.js' ), array(), '1.0.0', true );
     }
 
     /**

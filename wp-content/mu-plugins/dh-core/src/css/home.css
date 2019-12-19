@@ -1,0 +1,29 @@
+@import './modules/aspect.css';
+
+.hero-video-after {
+  background-image: linear-gradient(
+    135deg,
+    rgba(theme('colors.black'), 0.65),
+    rgba(theme('colors.brand.indigo'), 0.65) 90%
+  );
+  transition: opacity 0.2s ease-in;
+}
+
+.hero-video-frame {
+  @apply opacity-100;
+  transition: opacity 0.2s ease-in;
+}
+
+.hero-video-img {
+  @apply opacity-0;
+  transition: opacity 0.2s ease-in;
+}
+
+[data-video-state="complete"] .hero-video-frame {
+  @apply opacity-0;
+}
+
+[data-video-state="complete"] .hero-video-after,
+[data-video-state="complete"] .hero-video-img {
+  @apply opacity-100;
+}
