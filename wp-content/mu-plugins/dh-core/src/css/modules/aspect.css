@@ -1,37 +1,19 @@
 @responsive {
-  .center-y {
-    top: 50%;
-    bottom: 50%;
-    transform: translateY(-50%);
-  }
-
-  .center-x {
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50%);
-  }
-
-  .center-both {
-    top: 50%;
-    left: 50%;
-    right: 50%;
-    bottom: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   .aspect-none::before {
     @apply hidden;
   }
 
   .aspect-16\:9,
   .aspect-5\:3,
-  .aspect-4\:3 {
+  .aspect-4\:3,
+  .aspect-3\:2 {
     position: relative;
   }
 
   .aspect-16\:9::before,
   .aspect-5\:3::before,
-  .aspect-4\:3::before {
+  .aspect-4\:3::before,
+  .aspect-3\:2::before {
     content: "";
     display: block;
     width: 100%;
@@ -47,6 +29,10 @@
 
   .aspect-4\:3::before {
     padding-top: calc((3 / 4) * 100%);
+  }
+
+  .aspect-3\:2::before {
+    padding-top: calc((2 / 3) * 100%);
   }
 
   .aspect-content-0 {

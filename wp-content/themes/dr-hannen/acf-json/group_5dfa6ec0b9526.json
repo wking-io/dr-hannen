@@ -94,7 +94,7 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_5dfa6f4e01a9a",
@@ -131,7 +131,7 @@
                     "collapsed": "field_5dfa6f9001a9c",
                     "min": 0,
                     "max": 0,
-                    "layout": "table",
+                    "layout": "block",
                     "button_label": "Add Brand",
                     "sub_fields": [
                         {
@@ -347,5 +347,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1576693843
+    "modified": 1576794324
 }

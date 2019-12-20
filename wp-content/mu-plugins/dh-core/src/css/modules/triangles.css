@@ -1,0 +1,16 @@
+.triangles {
+  @apply absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  width: 53%;
+}
+
+.triangles--left {
+  left: 0;
+}
+
+.triangles--right {
+  right: 0;
+  transform: translateY(-50%) scaleX(-1);
+}

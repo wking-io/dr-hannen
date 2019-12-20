@@ -1,0 +1,4 @@
+.bg-pattern {
+  @apply bg-grey-100 bg-repeat;
+  background-image: url('../images/pattern.png');
+}

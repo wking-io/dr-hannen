@@ -56,7 +56,7 @@
             "collapsed": "field_5dfa717cc26e3",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "block",
             "button_label": "Add Video",
             "sub_fields": [
                 {
@@ -137,7 +137,7 @@
             "collapsed": "field_5dfa717cc26e3",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "block",
             "button_label": "Add Video",
             "sub_fields": [
                 {
@@ -193,7 +193,7 @@
             "collapsed": "field_5dfa721ec26ec",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "block",
             "button_label": "Add Partner",
             "sub_fields": [
                 {
@@ -259,5 +259,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1576694338
+    "modified": 1576769158
 }

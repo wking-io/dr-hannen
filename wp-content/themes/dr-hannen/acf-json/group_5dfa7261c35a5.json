@@ -53,7 +53,7 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_5dfa7dd740d15",
@@ -98,7 +98,7 @@
                     "collapsed": "field_5dfa7dfe40d17",
                     "min": 6,
                     "max": 0,
-                    "layout": "",
+                    "layout": "block",
                     "button_label": "Add Post",
                     "sub_fields": [
                         {
@@ -180,7 +180,7 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_5dfa7f1240d1b",
@@ -225,7 +225,7 @@
                     "collapsed": "field_5dfa7dfe40d17",
                     "min": 6,
                     "max": 0,
-                    "layout": "",
+                    "layout": "block",
                     "button_label": "Add Post",
                     "sub_fields": [
                         {
@@ -307,7 +307,7 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_5dfa802940d21",
@@ -352,7 +352,7 @@
                     "collapsed": "field_5dfa7dfe40d17",
                     "min": 6,
                     "max": 0,
-                    "layout": "",
+                    "layout": "block",
                     "button_label": "Add Post",
                     "sub_fields": [
                         {
@@ -434,7 +434,7 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_5dfa82d540d27",
@@ -479,7 +479,7 @@
                     "collapsed": "field_5dfa7dfe40d17",
                     "min": 6,
                     "max": 0,
-                    "layout": "table",
+                    "layout": "block",
                     "button_label": "Add Post",
                     "sub_fields": [
                         {
@@ -528,5 +528,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1576699214
+    "modified": 1576794354
 }

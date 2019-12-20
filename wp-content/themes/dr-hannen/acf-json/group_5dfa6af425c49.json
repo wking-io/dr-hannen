@@ -61,45 +61,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5dfa6af43761a",
-                    "label": "Subheading",
-                    "name": "subheading",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
                     "key": "field_5dfa6b6ed4d9d",
-                    "label": "Heading",
-                    "name": "heading",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5dfa6af437651",
                     "label": "Heading",
                     "name": "heading",
                     "type": "text",
@@ -134,26 +96,7 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
-                },
-                {
-                    "key": "field_5dfa6af43767a",
-                    "label": "Content",
-                    "name": "content",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": ""
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_5dfa6b7ed4d9f",
@@ -206,82 +149,6 @@
                             "maxlength": ""
                         }
                     ]
-                },
-                {
-                    "key": "field_5dfa6af43769f",
-                    "label": "Button",
-                    "name": "button",
-                    "type": "group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5dfa6af43d040",
-                            "label": "Button Link",
-                            "name": "link",
-                            "type": "url",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": ""
-                        },
-                        {
-                            "key": "field_5dfa6af43d070",
-                            "label": "Button Text",
-                            "name": "text",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ]
-                },
-                {
-                    "key": "field_5dfa6ba9d4da2",
-                    "label": "Image",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
                 }
             ]
         },
@@ -301,7 +168,7 @@
             "collapsed": "field_5dfa6c3ad4da5",
             "min": 0,
             "max": 3,
-            "layout": "table",
+            "layout": "block",
             "button_label": "Add Selling Point",
             "sub_fields": [
                 {
@@ -364,7 +231,7 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
+                    "new_lines": "wpautop"
                 }
             ]
         },
@@ -462,7 +329,7 @@
                     "collapsed": "field_5dfa6d8fd4dac",
                     "min": 2,
                     "max": 0,
-                    "layout": "table",
+                    "layout": "block",
                     "button_label": "Add Quote",
                     "sub_fields": [
                         {
@@ -579,5 +446,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1576693423
+    "modified": 1576794384
 }

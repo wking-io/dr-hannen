@@ -187,7 +187,7 @@
             "collapsed": "field_5dfa620165b31",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "block",
             "button_label": "Add Section",
             "sub_fields": [
                 {
@@ -269,7 +269,7 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_5dfa620e65b33",
@@ -400,7 +400,7 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_5dfa680c65b3c",
@@ -498,7 +498,7 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_5dfa689c65b41",
@@ -781,5 +781,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1576693255
+    "modified": 1576794247
 }

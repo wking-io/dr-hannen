@@ -1,6 +1,6 @@
 {
     "key": "group_5dfa706d41598",
-    "title": "Clinic",
+    "title": "CLINIC",
     "fields": [
         {
             "key": "field_5dfa70732906a",
@@ -18,7 +18,7 @@
             "collapsed": "field_5dfa70992906d",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "block",
             "button_label": "Add Clinic",
             "sub_fields": [
                 {
@@ -157,5 +157,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1576693982
+    "modified": 1576769459
 }

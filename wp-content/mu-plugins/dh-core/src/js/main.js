@@ -1,3 +1,4 @@
+import '../images/pattern.png';
 import '../css/main.css';
 
 import { setupMenu } from './modules/menu';
