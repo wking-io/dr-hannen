@@ -603,7 +603,7 @@
                     ],
                     "allow_null": 0,
                     "multiple": 0,
-                    "return_format": "object",
+                    "return_format": "id",
                     "ui": 1
                 },
                 {
@@ -654,7 +654,7 @@
                     ],
                     "allow_null": 0,
                     "multiple": 0,
-                    "return_format": "object",
+                    "return_format": "id",
                     "ui": 1
                 },
                 {
@@ -705,7 +705,7 @@
                     ],
                     "allow_null": 0,
                     "multiple": 0,
-                    "return_format": "object",
+                    "return_format": "id",
                     "ui": 1
                 },
                 {
@@ -756,7 +756,7 @@
                     ],
                     "allow_null": 0,
                     "multiple": 0,
-                    "return_format": "object",
+                    "return_format": "id",
                     "ui": 1
                 }
             ]
@@ -781,5 +781,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1576794247
+    "modified": 1576860267
 }

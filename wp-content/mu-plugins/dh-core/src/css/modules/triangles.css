@@ -1,9 +1,6 @@
 .triangles {
-  @apply absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  @apply absolute h-auto w-full;
   z-index: -1;
-  width: 53%;
 }
 
 .triangles--left {
@@ -12,5 +9,18 @@
 
 .triangles--right {
   right: 0;
-  transform: translateY(-50%) scaleX(-1);
+  transform: scaleX(-1);
+}
+
+@screen md {
+  .triangles {
+    @apply absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 53%;
+  }
+
+  .triangles--right {
+    transform: translateY(-50%) scaleX(-1);
+  }
 }

@@ -12,23 +12,25 @@
   transition: opacity 0.2s ease-in;
 }
 
-.hero-video-frame {
-  @apply opacity-100;
-  transition: opacity 0.2s ease-in;
-}
+@screen md {
+  .hero-video-frame {
+    @apply opacity-100;
+    transition: opacity 0.2s ease-in;
+  }
 
-.hero-video-img {
-  @apply opacity-0;
-  transition: opacity 0.2s ease-in;
-}
+  .hero-video-img {
+    @apply opacity-0;
+    transition: opacity 0.2s ease-in;
+  }
 
-[data-video-state="complete"] .hero-video-frame {
-  @apply opacity-0;
-}
+  [data-video-state="complete"] .hero-video-frame {
+    @apply opacity-0;
+  }
 
-[data-video-state="complete"] .hero-video-after,
-[data-video-state="complete"] .hero-video-img {
-  @apply opacity-100;
+  [data-video-state="complete"] .hero-video-after,
+  [data-video-state="complete"] .hero-video-img {
+    @apply opacity-100;
+  }
 }
 
 @screen md {
@@ -36,4 +38,85 @@
     @apply mx-8;
     width: calc(50% - theme('spacing.16'));
   }
+}
+
+@screen md {
+  .featured-articles {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: 350px 350px;
+  }
+
+  .article--physical {
+    grid-column: 1 / span 9;
+    grid-row: 1 / span 1;
+  }
+
+  .article--mental {
+    grid-column: 10 / span 9;
+    grid-row: 1 / span 1;
+  }
+
+  .article--spiritual {
+    grid-column: 1 / span 9;
+    grid-row: 2 / span 1;
+  }
+
+  .article--emotional {
+    grid-column: 10 / span 9;
+    grid-row: 2 / span 1;
+  }
+}
+
+@screen lg {
+  .article--physical {
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 2;
+  }
+
+  .article--mental {
+    grid-column: 6 / span 8;
+    grid-row: 1 / span 1;
+  }
+
+  .article--spiritual {
+    grid-column: 6 / span 8;
+    grid-row: 2 / span 1;
+  }
+
+  .article--emotional {
+    grid-column: 14 / span 5;
+    grid-row: 1 / span 2;
+  }
+
+  .article--physical .article__content,
+  .article--emotional .article__content {
+    @apply py-24;
+  }
+
+  .article--physical .article__excerpt,
+  .article--emotional .article__excerpt {
+    @apply mt-16;
+  }
+
+  .article--mental .article__content,
+  .article--spiritual .article__content {
+    @apply py-8;
+  }
+}
+
+.article--physical .article__content {
+  background-image: linear-gradient(rgba(theme('colors.brand.teal'), 0.9), rgba(theme('colors.brand.teal'), 0.9));
+}
+
+.article--mental .article__content {
+  background-image: linear-gradient(rgba(theme('colors.brand.cyan'), 0.9), rgba(theme('colors.brand.cyan'), 0.9));
+}
+
+.article--spiritual .article__content {
+  background-image: linear-gradient(rgba(theme('colors.brand.blue'), 0.9), rgba(theme('colors.brand.blue'), 0.9));
+}
+
+.article--emotional .article__content {
+  background-image: linear-gradient(rgba(theme('colors.brand.navy'), 0.9), rgba(theme('colors.brand.navy'), 0.9));
 }

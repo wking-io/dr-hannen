@@ -23,6 +23,9 @@ function dh_setup() {
 	) ) );
 	add_theme_support( 'customize-selective-refresh-widgets' );
 	add_filter( 'show_admin_bar', '__return_false' );
+	add_filter( 'excerpt_length', function($length) {
+    return 25;
+} );
 }
 
 endif;
