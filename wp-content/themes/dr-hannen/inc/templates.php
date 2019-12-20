@@ -67,4 +67,22 @@ function dh_display_triangles( $classes = "" ) {
   <?php echo ob_get_clean();
 }
 
+function dh_display_ad() {
+  ob_start(); ?>
+    <div class="w-full">
+      <a class="flex relative rounded overflow-hidden" href="<?php the_field( 'ad_link', 'options' ); ?>">
+        <?php echo wp_get_attachment_image( get_field( 'ad_image', 'options' ), 'medium', false, array( 'class' => 'absolute left-0 top-0 h-full w-auto', 'aria-hidden' => true ) ); ?>
+        <div class="ad_content w-full relative z-10 flex justify-end p-4">
+          <div class="w-full md:w-8/12 lg:w-7/12 flex flex-col items-center justify-center">
+            <div class="text-center md:text-left">
+              <p class="font-extrabold"><?php the_field( 'ad_heading', 'options' ); ?></p>
+              <p class="text-xs"><?php the_field( 'ad_subheading', 'options' ); ?></p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  <?php echo ob_get_clean();
+}
+
 ?>

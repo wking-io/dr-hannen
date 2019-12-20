@@ -10,6 +10,13 @@ function add_option_pages() {
 			'icon_url' 	 => 'dashicons-building',
 			'position'	 => 75
 		) );
+
+		acf_add_options_page( array(
+			'page_title' => 'Ad Settings',
+			'menu_slug'	 => 'ad-settings',
+			'icon_url' 	 => 'dashicons-welcome-widgets-menus',
+			'position'	 => 76
+		) );
 	
 	}
 

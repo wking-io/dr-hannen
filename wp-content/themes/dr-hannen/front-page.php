@@ -82,7 +82,7 @@ endif;
               </div>
             </div>
             <div class="mt-8 md:mt-0 w-full">
-              <div class="w-full max-w-lg mx-auto">
+              <div class="w-full md:max-w-lg mx-auto">
                 <p class="text-brand-cyan text-base lg:text-xl uppercase tracking-wide font-bold"><?php echo $cta['subheading']; ?></p>
                 <h4 class="mt-2 font-extrabold text-3xl lg:text-5xl leading-tight"><?php echo $cta['heading']; ?></h4>
                 <div class="dh-content text-grey-500"><?php echo $cta['content']; ?></div>

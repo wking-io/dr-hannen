@@ -1,0 +1,17 @@
+.ad_content {
+  background-image: linear-gradient(
+    to right,
+    rgba(theme('colors.brand.teal'), 0),
+    rgba(theme('colors.brand.blue'), 1) 60%
+  );
+}
+
+@screen lg {
+  .ad_content {
+    background-image: linear-gradient(
+      to right,
+      rgba(theme('colors.brand.teal'), 0),
+      rgba(theme('colors.brand.blue'), 1) 50%
+    );
+  }
+}

@@ -1,0 +1,5 @@
+@screen md {
+  .selling-point {
+    width: calc(100% / 3 - theme('spacing.16'));
+  }
+}

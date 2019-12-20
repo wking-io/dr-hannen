@@ -1,5 +1,6 @@
 @import "./modules/vendor.css";
 @import "./modules/header.css";
+@import "./modules/footer.css";
 @import "./modules/visually-hidden.css";
 @import "./modules/gradient.css";
 @import "./modules/search.css";
@@ -10,7 +11,5 @@ html {
 }
 
 .dh-shadow {
-  box-shadow:
-    2px 2px 10px rgba(theme('colors.brand.indigo'), 0.15),
-    2px 2px 20px rgba(theme('colors.brand.cyan'), 0.2);
+  box-shadow: 2px 2px 10px rgba(theme('colors.brand.indigo'), 0.15), 2px 2px 20px rgba(theme('colors.brand.cyan'), 0.2);
 }

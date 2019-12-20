@@ -172,30 +172,6 @@
             "button_label": "Add Selling Point",
             "sub_fields": [
                 {
-                    "key": "field_5dfa6e214d39c",
-                    "label": "Image",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "",
-                    "preview_size": "medium",
-                    "library": "",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
                     "key": "field_5dfa6e214d3c6",
                     "label": "Heading",
                     "name": "heading",
@@ -446,5 +422,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1576794457
+    "modified": 1576875442
 }

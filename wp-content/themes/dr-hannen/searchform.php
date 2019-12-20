@@ -11,5 +11,5 @@
         </span>
         <input type="search" class="search-input text-sm flex items-center bg-grey-100 text-grey-800 py-1 px-2 pl-8 rounded w-56" placeholder="<?php echo esc_attr_x( 'Search', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
     </label>
-    <input type="submit" class="search-submit uppercase text-sm font-bold flex items-center bg-gradient text-white py-1 px-2 rounded ml-4 cursor-pointer" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+    <input type="submit" class="search-submit uppercase text-sm font-bold flex items-center bg-gradient text-white py-1 px-6 rounded ml-4 cursor-pointer" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 </form>
