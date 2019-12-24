@@ -4,13 +4,13 @@
 @import './modules/selling-point.css';
 @import './modules/marquee.css';
 
-.testimonial {
-  @apply w-full;
+.show-time {
+  @apply relative;
 }
 
-@screen md {
-  .testimonial {
-    @apply mx-4;
-    width: calc(50% - theme('spacing.8'));
-  }
+.show-time:not(:first-child):before {
+  @apply absolute left-0 w-px bg-brand-cyan h-12;
+  content: '';
+  top: 50%;
+  transform: translateY(-50%);
 }

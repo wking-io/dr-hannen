@@ -1,0 +1,14 @@
+.marquee .slick-track {
+  @apply mb-4;
+  height: 200px;
+}
+
+.marquee .slick-slide {
+  @apply h-full w-auto rounded ml-4;
+}
+
+@screen md {
+  .marquee .slick-track {
+    height: 300px;
+  }
+}

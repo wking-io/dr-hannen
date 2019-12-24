@@ -1,4 +1,4 @@
-import '../css/book.css';
+import '../css/tv.css';
 
 import { marquee } from './modules/sliders';
 

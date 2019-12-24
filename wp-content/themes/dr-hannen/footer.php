@@ -49,9 +49,9 @@ if ( ! is_page( 'who-we-are' ) ) {
 				<?php dh_display_ad(); ?>
 			</div>
 
-			<div class="flex items-center justify-between px-8 py-6 w-full text-sm mt-16">
+			<div class="flex flex-col md:flex-row items-center justify-between px-8 pb-8 md:py-6 w-full text-sm mt-16">
 				<p>Dr. Hannen &copy; <?php echo date( 'Y' ); ?> All Rights Reserved</p>
-				<ul class="flex items-center justify-end">
+				<ul class="flex items-center justify-end mt-4 md:mt-0">
 					<li><a class="hover:underline" href="/privacy-policy">Legal & Privacy</a></li>
 					<li class="ml-6"><a class="hover:underline" href="/return-policy">Return Policy</a></li>
 				</ul>

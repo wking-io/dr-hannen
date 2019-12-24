@@ -1,6 +1,6 @@
 <?php ?>
 
-<form role="search" method="get" class="search-form flex items-center relative z-50" action="<?php echo home_url( '/' ); ?>">
+<form role="search" method="get" class="search-form flex flex-col md:flex-row items-center relative z-50" action="<?php echo home_url( '/' ); ?>">
     <input type="hidden" value="post" name="post_type" id="post_type" />
     <label class="relative block">
         <span class="visually-hidden"><?php echo _x( 'Search for:', 'label' ) ?></span>
@@ -11,5 +11,5 @@
         </span>
         <input type="search" class="search-input text-sm flex items-center bg-grey-100 text-grey-800 py-1 px-2 pl-8 rounded w-56" placeholder="<?php echo esc_attr_x( 'Search', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
     </label>
-    <input type="submit" class="search-submit uppercase text-sm font-bold flex items-center bg-gradient text-white py-1 px-6 rounded ml-4 cursor-pointer" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+    <input type="submit" class="search-submit uppercase text-sm font-bold flex items-center bg-gradient text-white py-1 px-6 rounded md:ml-4 cursor-pointer w-full mt-4 md:w-auto md:mt-0" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 </form>
