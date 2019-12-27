@@ -9,6 +9,9 @@
  * @package second-mile
  */
 
+$body_defaults = 'font-sans text-black overflow-x-hidden';
+$maybe_pattern = is_page_template( 'templates/clinics.php' ) ? ' bg-pattern' : '';
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +26,7 @@
 		<?php wp_head(); ?>
 	</head>
 
-<body <?php body_class( 'font-sans text-black overflow-x-hidden' ) ?>>
+<body <?php body_class( $body_defaults . $maybe_pattern ); ?>>
 	<a class="skip-link screen-reader-text visually-hidden" href="#content"><?php esc_html_e( 'Skip to content', THEME_NAME ); ?></a>
 
 	<header class="header flex justify-between items-center mt-8 lg:mt-12 w-5/6 md:w-11/12 mx-auto" role="banner" data-menu-open="false" id="masthead">

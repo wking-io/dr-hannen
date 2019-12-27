@@ -1,6 +1,6 @@
 {
     "key": "group_5dfa706d41598",
-    "title": "CLINIC",
+    "title": "CLINICS",
     "fields": [
         {
             "key": "field_5dfa70732906a",
@@ -157,5 +157,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1576769459
+    "modified": 1577412985
 }

@@ -1,0 +1,12 @@
+@import './modules/aspect.css';
+@import './modules/pattern.css';
+
+.clinic-image {
+  @apply w-full;
+}
+
+@screen md {
+  .clinic-image {
+    width: 45%;
+  }
+}
