@@ -15,7 +15,7 @@ export function marquee(context, speed) {
 }
 
 export function media(context, speed) {
-  jQuery(context).slick({
+  jQuery(`${context} .slider`).slick({
     infinite: true,
     slidesToShow: 1,
     arrows: false,
@@ -24,6 +24,8 @@ export function media(context, speed) {
     speed: 500,
     dots: false,
     variableWidth: true,
+    prevArrow: jQuery(`${context} .button-prev`),
+    nextArrow: jQuery(`${context} .button-next`),
   });
 }
 

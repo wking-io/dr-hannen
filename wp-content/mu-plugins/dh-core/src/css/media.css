@@ -5,7 +5,11 @@
 }
 
 @screen md {
-  .media-slider {
+  .slider {
     width: calc( 100% / 24 * 23 );
   }
+}
+
+.media .slick-list .slick-slide.flex {
+  @apply flex mr-4;
 }
