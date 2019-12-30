@@ -67,6 +67,10 @@ if ( ! function_exists( 'dh_styles' ) ) :
 			if ( is_page_template( 'templates/clinics.php' ) ) :
 				wp_enqueue_style('dh_clinics');
 			endif;
+
+			if ( is_page_template( 'templates/contact.php' ) ) :
+				wp_enqueue_style('dh_contact');
+			endif;
 	}
 
 endif;

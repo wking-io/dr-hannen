@@ -132,6 +132,8 @@ class DhCore {
       wp_register_style('dh_book', $this->get_asset_url( 'css/book.css' ), array(), '1.0.0' );
       wp_register_style('dh_tv', $this->get_asset_url( 'css/tv.css' ), array(), '1.0.0' );
       wp_register_style('dh_clinics', $this->get_asset_url( 'css/clinics.css' ), array(), '1.0.0' );
+      wp_register_style('dh_contact', $this->get_asset_url( 'css/contact.css' ), array(), '1.0.0' );
+
     }
 
     /**
