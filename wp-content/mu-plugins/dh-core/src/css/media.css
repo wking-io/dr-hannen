@@ -1,0 +1,11 @@
+@import './modules/pattern.css';
+
+.flip {
+  transform: rotate(180deg);
+}
+
+@screen md {
+  .media-slider {
+    width: calc( 100% / 24 * 23 );
+  }
+}

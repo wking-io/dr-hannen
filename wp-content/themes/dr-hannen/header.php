@@ -10,7 +10,7 @@
  */
 
 $body_defaults = 'font-sans text-black overflow-x-hidden';
-$maybe_pattern = is_page_template( 'templates/clinics.php' ) ? ' bg-pattern' : '';
+$maybe_pattern = is_page_template( 'templates/clinics.php' ) || is_page_template( 'templates/media.php' ) ? ' bg-pattern' : '';
 
 ?>
 

@@ -14,7 +14,7 @@
   @apply hidden;
 }
 
-.bg-patter .header .search-input {
+.bg-pattern .header .search-input {
   @apply bg-white;
 }
 

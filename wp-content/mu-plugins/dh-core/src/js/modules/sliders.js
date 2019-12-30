@@ -13,3 +13,17 @@ export function marquee(context, speed) {
     cssEase: 'linear'
   });
 }
+
+export function media(context, speed) {
+  jQuery(context).slick({
+    infinite: true,
+    slidesToShow: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: speed,
+    speed: 500,
+    dots: false,
+    variableWidth: true,
+  });
+}
+

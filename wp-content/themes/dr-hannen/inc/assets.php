@@ -31,6 +31,11 @@ if ( ! function_exists( 'dh_scripts' ) ) :
 			wp_enqueue_script('dh_about');
 		endif;
 
+		if ( is_page_template( 'templates/media.php' ) ) :
+			wp_enqueue_script('dh_slick');
+			wp_enqueue_script('dh_media');
+		endif;
+
 	}
 
 endif;
@@ -70,6 +75,11 @@ if ( ! function_exists( 'dh_styles' ) ) :
 
 			if ( is_page_template( 'templates/contact.php' ) ) :
 				wp_enqueue_style('dh_contact');
+			endif;
+
+			if ( is_page_template( 'templates/media.php' ) ) :
+				wp_enqueue_style('dh_slick');
+				wp_enqueue_style('dh_media');
 			endif;
 	}
 

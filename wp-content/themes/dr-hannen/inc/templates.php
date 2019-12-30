@@ -85,4 +85,22 @@ function dh_display_ad() {
   <?php echo ob_get_clean();
 }
 
+
+function dh_display_arrow() {
+  ob_start(); ?>
+    <svg width="21" height="20" viewBox="0 0 21 20" class="text-black h-full w-auto" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2431 19.9705L12.223 17.9906L4.30339 10.071L12.223 2.15145L10.2431 0.17155L0.343589 10.071L10.2431 19.9705Z" class="fill-current" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2431 19.9705L12.223 17.9906L4.30339 10.071L12.223 2.15145L10.2431 0.17155L0.343589 10.071L10.2431 19.9705Z" class="fill-current" />
+    </svg>
+  <?php echo ob_get_clean();
+}
+
+function dh_display_play() {
+  ob_start(); ?>
+    <svg width="34" height="35" viewBox="0 0 34 35" class="text-brand-cyan h-auto w-full" xmlns="http://www.w3.org/2000/svg">
+      <path d="M32.5178 15.4765C33.9703 16.2192 33.9704 18.295 32.5178 19.0378L2.91059 34.178C1.57981 34.8585 -1.65631e-06 33.892 -1.59098e-06 32.3973L-2.67382e-07 2.11698C-2.02047e-07 0.622291 1.5798 -0.344224 2.91058 0.336294L32.5178 15.4765Z" class="fill-current" />
+    </svg>
+  <?php echo ob_get_clean();
+}
+
 ?>
