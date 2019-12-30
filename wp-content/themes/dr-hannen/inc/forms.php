@@ -6,7 +6,7 @@ function dh_setup_fieldsets ( $content, $field, $value, $lead_id, $form_id ) {
 
   if ( 1 === $field->id ) :
     ob_start(); ?>
-        <h2 class="font-extrabold leading-tight text-2xl md:text-3xl">Do you have questions for me?<br />Send me a message.</h2>
+        <h2 class="font-extrabold leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-2xl xl:text-3xl">Do you have questions for me?<br />Send me a message.</h2>
         <p class="flex items-center mt-8"><span class="font-bold mr-3">P:</span><span>866.362.7292</span></p>
         <p class="flex items-center mt-2 pb-6"><span class="font-bold mr-3">E:</span><span>info@hannenhealth.com</span></p>
       </li>

@@ -98,10 +98,10 @@
 
 @screen xl {
   .gform_fields:first-child {
-    @apply w-2/5;
+    @apply w-5/12;
   }
 
   .gform_footer:before {
-    @apply block w-2/5;
+    @apply block w-5/12;
   }
 }
