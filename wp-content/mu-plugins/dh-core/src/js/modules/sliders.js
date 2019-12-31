@@ -18,14 +18,13 @@ export function media(context, speed) {
   jQuery(`${context} .slider`).slick({
     infinite: true,
     slidesToShow: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: speed,
+    arrows: true,
+    autoplay: false,
     speed: 500,
     dots: false,
     variableWidth: true,
-    prevArrow: jQuery(`${context} .button-prev`),
-    nextArrow: jQuery(`${context} .button-next`),
+    prevArrow: `${context} .button-prev`,
+    nextArrow: `${context} .button-next`,
   });
 }
 

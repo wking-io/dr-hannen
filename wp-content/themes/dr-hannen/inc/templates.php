@@ -97,8 +97,16 @@ function dh_display_arrow() {
 
 function dh_display_play() {
   ob_start(); ?>
-    <svg width="34" height="35" viewBox="0 0 34 35" class="text-brand-cyan h-auto w-full" xmlns="http://www.w3.org/2000/svg">
+    <svg width="34" height="35" viewBox="0 0 34 35" class="text-white h-auto w-full" xmlns="http://www.w3.org/2000/svg">
       <path d="M32.5178 15.4765C33.9703 16.2192 33.9704 18.295 32.5178 19.0378L2.91059 34.178C1.57981 34.8585 -1.65631e-06 33.892 -1.59098e-06 32.3973L-2.67382e-07 2.11698C-2.02047e-07 0.622291 1.5798 -0.344224 2.91058 0.336294L32.5178 15.4765Z" class="fill-current" />
+    </svg>
+  <?php echo ob_get_clean();
+}
+
+function dh_display_link() {
+  ob_start(); ?>
+    <svg width="20" height="20" viewBox="0 0 20 20" class="text-white w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 5H12C11.45 5 11 5.45 11 6C11 6.55 11.45 7 12 7H15C16.65 7 18 8.35 18 10C18 11.65 16.65 13 15 13H12C11.45 13 11 13.45 11 14C11 14.55 11.45 15 12 15H15C17.76 15 20 12.76 20 10C20 7.24 17.76 5 15 5ZM6 10C6 10.55 6.45 11 7 11H13C13.55 11 14 10.55 14 10C14 9.45 13.55 9 13 9H7C6.45 9 6 9.45 6 10ZM8 13H5C3.35 13 2 11.65 2 10C2 8.35 3.35 7 5 7H8C8.55 7 9 6.55 9 6C9 5.45 8.55 5 8 5H5C2.24 5 0 7.24 0 10C0 12.76 2.24 15 5 15H8C8.55 15 9 14.55 9 14C9 13.45 8.55 13 8 13Z" class="fill-current" />
     </svg>
   <?php echo ob_get_clean();
 }

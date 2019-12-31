@@ -1,4 +1,6 @@
 @import './modules/pattern.css';
+@import './modules/aspect.css';
+@import './modules/gradient.css';
 
 .flip {
   transform: rotate(180deg);
@@ -12,4 +14,38 @@
 
 .media .slick-list .slick-slide.flex {
   @apply flex mr-4;
+}
+
+.popup {
+  z-index: 99999;
+}
+
+.popup-bg {
+  background-image: linear-gradient( rgba(theme('colors.black'), 0.8), rgba(theme('colors.black'), 0.8));
+}
+
+.popup iframe {
+  @apply w-full h-full;
+}
+
+[data-popup-hidden="true"] {
+  @apply hidden;
+}
+
+.slick-list {
+  overflow: visible;
+}
+
+.media-card {
+  width: 250px;
+}
+
+@screen md {
+  .media-card {
+    width: 350px;
+  }
+}
+
+.partner {
+  width: calc( 100% / 3 - theme('spacing.24'));
 }

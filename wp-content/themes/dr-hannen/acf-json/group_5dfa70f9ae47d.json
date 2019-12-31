@@ -138,7 +138,7 @@
             "min": 0,
             "max": 0,
             "layout": "block",
-            "button_label": "Add Video",
+            "button_label": "Add Article",
             "sub_fields": [
                 {
                     "key": "field_5dfa71abc26e8",
@@ -259,5 +259,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1576769158
+    "modified": 1577808163
 }
