@@ -19,7 +19,7 @@ get_header(); ?>
   </div>
 
   <?php if ( ! empty( $photos ) ) : ?>
-    <div class="media--photo mt-24">
+    <div class="media--photo mt-16 md:mt-24">
       <div class="flex items-center justify-between w-5/6 md:w-11/12 mx-auto">
         <h4 class="text-lg md:text-xl font-extrabold">Photos</h4>
         <div class="flex items-center">
@@ -44,7 +44,7 @@ get_header(); ?>
   <?php endif; ?>
 
   <?php if ( ! empty( $videos ) ) : ?>
-    <div class="media--video mt-24">
+    <div class="media--video mt-16 md:mt-24">
       <div class="flex items-center justify-between w-5/6 md:w-11/12 mx-auto">
         <h4 class="text-lg md:text-xl font-extrabold">Videos</h4>
         <div class="flex items-center">
@@ -80,7 +80,7 @@ get_header(); ?>
   <?php endif; ?>
 
   <?php if ( ! empty( $articles ) ) : ?>
-    <div class="media--article mt-24">
+    <div class="media--article mt-16 md:mt-24">
       <div class="flex items-center justify-between w-5/6 md:w-11/12 mx-auto">
         <h4 class="text-lg md:text-xl font-extrabold">Articles</h4>
         <div class="flex items-center">
@@ -106,10 +106,10 @@ get_header(); ?>
   <?php endif; ?>
 
   <?php if ( ! empty( $partners ) ) : ?>
-    <div class="w-5/6 md:w-11/12 max-w-6xl mx-auto mt-24 pb-38">
-      <ul class="flex flex-wrap -mx-12">
+    <div class="w-5/6 md:w-11/12 max-w-6xl mx-auto mt-16 md:mt-24 pb-24 md:pb-32">
+      <ul class="flex flex-wrap -mx-8 md:-mx-12">
         <?php foreach ( $partners as $partner ) : ?>
-          <li class="aspect-4:3 overflow-hidden mx-12 partner mt-12">
+          <li class="aspect-4:3 overflow-hidden mx-8 md:mx-12 partner mt-12">
             <div class="aspect-content">
               <p class="visually-hidden"><?php echo $partner['name']; ?></p>
               <?php echo wp_get_attachment_image( $partner['logo'], 'medium', false, array( 'class' => 'w-full h-full object-cover', 'aria-hidden' => 'true') ); ?>
