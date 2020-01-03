@@ -111,4 +111,21 @@ function dh_display_link() {
   <?php echo ob_get_clean();
 }
 
+function dh_display_post ( $category_name = '', $id = 0 ) {
+  error_log( print_r( $id, true ) );
+  ob_start(); ?>
+    <li>
+      <div>
+        <p><?php echo $category_name; ?></p>
+        <?php get_the_post_thumbnail( $id, 'medium', array( 'class' => '' ) ); ?>
+      </div>
+      <div>
+        <h3><?php get_the_title( $id ); ?></h3>
+        <div><?php get_the_excerpt( $id ); ?></div>
+        <a href="<?php get_the_permalink( $id ); ?>">Read This Article</a>
+      </div>
+    </li>
+  <?php echo ob_end_clean();
+}
+
 ?>
