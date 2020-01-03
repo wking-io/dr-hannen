@@ -1,3 +1,79 @@
-.dh-content p {
-  @apply mt-6 leading-relaxed;
+.dh-content > p,
+.dh-content .wp-block-group {
+  @apply mt-6 leading-relaxed text-grey-600;
+}
+
+.dh-content h2,
+.dh-content h3,
+.dh-content h4 {
+  @apply mt-12 font-extrabold;
+}
+
+.dh-content h2 {
+  @apply text-2xl;
+}
+
+.dh-content blockquote {
+  @apply pl-6 py-1 border-l-2 border-grey-500 mt-6;
+}
+
+.dh-content blockquote > p {
+  @apply text-lg leading-relaxed mt-8;
+}
+
+.dh-content blockquote > cite {
+  @apply font-bold not-italic;
+}
+
+.dh-content ul {
+  @apply list-disc ml-8 mb-8;
+}
+
+.dh-content ol {
+  @apply list-decimal ml-8 mb-8;
+}
+
+.dh-content li {
+  @apply mb-4;
+}
+
+.dh-content img {
+  @apply w-full;
+}
+
+.dh-content .wp-block-image .alignleft,
+.dh-content .wp-block-image .alignright {
+  @apply float-none m-0 mb-8;
+}
+
+@screen sm {
+  .dh-content blockquote > p {
+    @apply text-xl;
+  }
+}
+
+@screen md {
+  .dh-content h2 {
+    @apply text-3xl;
+  }
+
+  .dh-content h3 {
+    @apply text-2xl;
+  }
+
+  .dh-content h4 {
+    @apply text-xl;
+  }
+
+  .dh-content > p {
+    @apply text-lg;
+  }
+
+  .dh-content .wp-block-image .alignleft {
+    @apply float-left w-1/2 m-8 ml-0;
+  }
+
+  .dh-content .wp-block-image .alignright {
+    @apply float-right w-1/2 m-8 mr-0;
+  }
 }

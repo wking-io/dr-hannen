@@ -134,6 +134,8 @@ class DhCore {
       wp_register_style('dh_clinics', $this->get_asset_url( 'css/clinics.css' ), array(), '1.0.0' );
       wp_register_style('dh_contact', $this->get_asset_url( 'css/contact.css' ), array(), '1.0.0' );
       wp_register_style('dh_media', $this->get_asset_url( 'css/media.css' ), array(), '1.0.0' );
+      wp_register_style('dh_page', $this->get_asset_url( 'css/page.css' ), array(), '1.0.0' );
+      wp_register_style('dh_about', $this->get_asset_url( 'css/about.css' ), array(), '1.0.0' );
 
     }
 
@@ -150,6 +152,7 @@ class DhCore {
       wp_register_script('dh_book', $this->get_asset_url( 'js/book.js' ), array( 'jquery' ), '1.0.0', true );
       wp_register_script('dh_tv', $this->get_asset_url( 'js/tv.js' ), array( 'jquery' ), '1.0.0', true );
       wp_register_script('dh_media', $this->get_asset_url( 'js/media.js' ), array( 'jquery' ), '1.0.0', true );
+      wp_register_script('dh_about', $this->get_asset_url( 'js/about.js' ), array( 'jquery' ), '1.0.0', true );
     }
 
     /**

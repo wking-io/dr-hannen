@@ -252,6 +252,61 @@
                     "toolbar": "basic",
                     "media_upload": 0,
                     "delay": 0
+                },
+                {
+                    "key": "field_5e0e4f6b5e119",
+                    "label": "Form Box",
+                    "name": "form_box",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e0e4faa5e11a",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5e0e4fbd5e11b",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop"
+                        }
+                    ]
                 }
             ]
         },
@@ -326,6 +381,61 @@
                     "toolbar": "basic",
                     "media_upload": 0,
                     "delay": 0
+                },
+                {
+                    "key": "field_5e0e4ff85e11c",
+                    "label": "Form Box",
+                    "name": "form_box",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e0e50055e11d",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5e0e50195e11e",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "wpautop"
+                        }
+                    ]
                 }
             ]
         }
@@ -347,5 +457,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1576794324
+    "modified": 1577999749
 }
