@@ -13,10 +13,9 @@ $appt['page'] = home_url( 'about#appointment' );
 
 if ( ! empty( $blog ) ) :
   $previews = array(
-    'physical'  => $blog['physical_choose_custom_post'],
-    'mental'    => $blog['mental_choose_custom_post'],
-    'spiritual' => $blog['spiritual_choose_custom_post'],
-    'emotional' => $blog['emotional_choose_custom_post'],
+    'body'  => $blog['body_choose_custom_post'],
+    'soul'    => $blog['soul_choose_custom_post'],
+    'spirit' => $blog['spirit_choose_custom_post'],
   );
 
   foreach ( $previews as $category => $is_custom ) :
@@ -123,7 +122,7 @@ endif;
                 </div>
                 <div class="article__content h-full relative z-10 text-white px-8 py-12 flex flex-col justify-end items-start">
                   <h4 class="text-2xl lg:text-3xl font-extrabold leading-tight"><?php echo get_the_title( $post_id ); ?></h4>
-                  <p class="article__excerpt text-sm xl:text-base leading-relaxed mt-8"><?php echo get_the_excerpt( $post_id ); ?></p>
+                  <p class="article__excerpt text-sm md:text-base leading-relaxed mt-8"><?php echo get_the_excerpt( $post_id ); ?></p>
                   <a class="text-sm xl:text-base border border-white bg-transparent font-bold py-3 px-12 inline-block rounded mt-8" href="<?php echo get_the_permalink( $post_id ); ?>">Read More</a>
                 </div>
               </div>

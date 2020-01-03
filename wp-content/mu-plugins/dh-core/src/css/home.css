@@ -47,76 +47,59 @@
     grid-template-rows: 350px 350px;
   }
 
-  .article--physical {
+  .article--body {
     grid-column: 1 / span 9;
     grid-row: 1 / span 1;
   }
 
-  .article--mental {
+  .article--soul {
     grid-column: 10 / span 9;
     grid-row: 1 / span 1;
   }
 
-  .article--spiritual {
-    grid-column: 1 / span 9;
-    grid-row: 2 / span 1;
-  }
-
-  .article--emotional {
-    grid-column: 10 / span 9;
+  .article--spirit {
+    grid-column: 1 / span 18;
     grid-row: 2 / span 1;
   }
 }
 
 @screen lg {
-  .article--physical {
-    grid-column: 1 / span 5;
+  .article--body {
+    grid-column: 1 / span 8;
     grid-row: 1 / span 2;
   }
 
-  .article--mental {
-    grid-column: 6 / span 8;
+  .article--soul {
+    grid-column: 9 / span 10;
     grid-row: 1 / span 1;
   }
 
-  .article--spiritual {
-    grid-column: 6 / span 8;
+  .article--spirit {
+    grid-column: 9 / span 10;
     grid-row: 2 / span 1;
   }
 
-  .article--emotional {
-    grid-column: 14 / span 5;
-    grid-row: 1 / span 2;
-  }
-
-  .article--physical .article__content,
-  .article--emotional .article__content {
+  .article--body .article__content {
     @apply py-24;
   }
 
-  .article--physical .article__excerpt,
-  .article--emotional .article__excerpt {
+  .article--body .article__excerpt {
     @apply mt-16;
   }
 
-  .article--mental .article__content,
-  .article--spiritual .article__content {
+  .article--soul .article__content {
     @apply py-8;
   }
 }
 
-.article--physical .article__content {
-  background-image: linear-gradient(rgba(theme('colors.brand.teal'), 0.9), rgba(theme('colors.brand.teal'), 0.9));
-}
-
-.article--mental .article__content {
+.article--body .article__content {
   background-image: linear-gradient(rgba(theme('colors.brand.cyan'), 0.9), rgba(theme('colors.brand.cyan'), 0.9));
 }
 
-.article--spiritual .article__content {
+.article--soul .article__content {
   background-image: linear-gradient(rgba(theme('colors.brand.blue'), 0.9), rgba(theme('colors.brand.blue'), 0.9));
 }
 
-.article--emotional .article__content {
+.article--spirit .article__content {
   background-image: linear-gradient(rgba(theme('colors.brand.navy'), 0.9), rgba(theme('colors.brand.navy'), 0.9));
 }

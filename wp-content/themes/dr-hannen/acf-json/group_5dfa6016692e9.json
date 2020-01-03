@@ -557,8 +557,8 @@
                 },
                 {
                     "key": "field_5dfa68d565b44",
-                    "label": "PHYSICAL \/\/ Choose Custom Post?",
-                    "name": "physical_choose_custom_post",
+                    "label": "BODY \/\/ Choose Custom Post?",
+                    "name": "body_choose_custom_post",
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
@@ -576,8 +576,8 @@
                 },
                 {
                     "key": "field_5dfa692265b45",
-                    "label": "PHYSICAL \/\/ Featured Post",
-                    "name": "physical_featured_post",
+                    "label": "BODY \/\/ Featured Post",
+                    "name": "body_featured_post",
                     "type": "post_object",
                     "instructions": "",
                     "required": 0,
@@ -599,7 +599,7 @@
                         "post"
                     ],
                     "taxonomy": [
-                        "category:physical"
+                        "category:body"
                     ],
                     "allow_null": 0,
                     "multiple": 0,
@@ -608,8 +608,8 @@
                 },
                 {
                     "key": "field_5dfa697d65b46",
-                    "label": "MENTAL \/\/ Choose Custom Post?",
-                    "name": "mental_choose_custom_post",
+                    "label": "SOUL \/\/ Choose Custom Post?",
+                    "name": "soul_choose_custom_post",
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
@@ -627,8 +627,8 @@
                 },
                 {
                     "key": "field_5dfa69c965b49",
-                    "label": "MENTAL \/\/ Featured Post",
-                    "name": "mental_featured_post",
+                    "label": "SOUL \/\/ Featured Post",
+                    "name": "soul_featured_post",
                     "type": "post_object",
                     "instructions": "",
                     "required": 0,
@@ -650,7 +650,7 @@
                         "post"
                     ],
                     "taxonomy": [
-                        "category:mental"
+                        "category:soul"
                     ],
                     "allow_null": 0,
                     "multiple": 0,
@@ -659,8 +659,8 @@
                 },
                 {
                     "key": "field_5dfa699b65b47",
-                    "label": "SPIRITUAL \/\/ Choose Custom Post?",
-                    "name": "spiritual_choose_custom_post",
+                    "label": "SPIRIT \/\/ Choose Custom Post?",
+                    "name": "spirit_choose_custom_post",
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
@@ -678,8 +678,8 @@
                 },
                 {
                     "key": "field_5dfa6a1265b4b",
-                    "label": "SPIRITUAL \/\/ Featured Post",
-                    "name": "spiritual_featured_post",
+                    "label": "SPIRIT \/\/ Featured Post",
+                    "name": "spirit_featured_post",
                     "type": "post_object",
                     "instructions": "",
                     "required": 0,
@@ -701,58 +701,7 @@
                         "post"
                     ],
                     "taxonomy": [
-                        "category:spiritual"
-                    ],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "id",
-                    "ui": 1
-                },
-                {
-                    "key": "field_5dfa69b465b48",
-                    "label": "EMOTIONAL \/\/ Choose Custom Post?",
-                    "name": "emotional_choose_custom_post",
-                    "type": "true_false",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 1,
-                    "ui_on_text": "",
-                    "ui_off_text": ""
-                },
-                {
-                    "key": "field_5dfa69f365b4a",
-                    "label": "EMOTIONAL \/\/ Featured Post",
-                    "name": "emotional_featured_post",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5dfa69b465b48",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "post"
-                    ],
-                    "taxonomy": [
-                        "category:emotional"
+                        "category:spirit"
                     ],
                     "allow_null": 0,
                     "multiple": 0,
@@ -781,5 +730,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1576860267
+    "modified": 1578081855
 }
