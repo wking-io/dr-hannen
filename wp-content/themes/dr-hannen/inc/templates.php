@@ -112,20 +112,21 @@ function dh_display_link() {
 }
 
 function dh_display_post ( $category_name = '', $id = 0 ) {
-  error_log( print_r( $id, true ) );
   ob_start(); ?>
-    <li>
-      <div>
-        <p><?php echo $category_name; ?></p>
-        <?php get_the_post_thumbnail( $id, 'medium', array( 'class' => '' ) ); ?>
+    <li class="post-card rounded shadow-md flex flex-col bg-white overflow-hidden md:mx-4 mt-8">
+      <div class="aspect-5:3 w-full">
+        <p class="absolute top-0 left-0 mt-4 ml-4 bg-<?php echo dh_category_to_color( $category_name ); ?> rounded dh-shadow z-10 text-white uppercase font-bold px-2 py-1 leading-tight text-sm tracking-wide"><?php echo $category_name; ?></p>
+        <div class="aspect-content">
+          <?php echo get_the_post_thumbnail( $id, 'medium', array( 'class' => 'w-full h-full object-cover' ) ); ?>
+        </div>
       </div>
-      <div>
-        <h3><?php get_the_title( $id ); ?></h3>
-        <div><?php get_the_excerpt( $id ); ?></div>
-        <a href="<?php get_the_permalink( $id ); ?>">Read This Article</a>
+      <div class="p-6 flex flex-col h-full">
+        <h3 class="font-bold"><?php echo get_the_title( $id ); ?></h3>
+        <div class="text-sm mt-4 flex-1 text-grey-600"><?php echo get_the_excerpt( $id ); ?></div>
+        <a class="uppercase tracking-wide font-bold text-sm underline hover:no-underline mt-4 inline-block" href="<?php echo get_the_permalink( $id ); ?>">Read This Article</a>
       </div>
     </li>
-  <?php echo ob_end_clean();
+  <?php echo ob_get_clean();
 }
 
 ?>

@@ -1,0 +1,36 @@
+@import './modules/pattern.css';
+@import './modules/aspect.css';
+
+@screen lg {
+  .post-card {
+    width: calc(50% - theme('spacing.8'));
+  }
+}
+
+@screen xl {
+  .post-card {
+    width: calc(100% / 3 - theme('spacing.8'));
+  }
+}
+
+.category-summary--body .category__overlay {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(theme('colors.brand.cyan'), 0.8),
+    rgba(theme('colors.brand.cyan'), 0.8)
+  );
+}
+.category-summary--soul .category__overlay {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(theme('colors.brand.blue'), 0.8),
+    rgba(theme('colors.brand.blue'), 0.8)
+  );
+}
+.category-summary--spirit .category__overlay {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(theme('colors.brand.navy'), 0.8),
+    rgba(theme('colors.brand.navy'), 0.8)
+  );
+}

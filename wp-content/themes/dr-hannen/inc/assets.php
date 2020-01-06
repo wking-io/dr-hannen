@@ -90,6 +90,10 @@ if ( ! function_exists( 'dh_styles' ) ) :
 				wp_enqueue_style('dh_about');
 			endif;
 
+			if ( is_home() ) :
+				wp_enqueue_style('dh_blog');
+			endif;
+
 			if ( is_page() && ! is_page_template() ) {
 				wp_enqueue_style('dh_page');
 			}
