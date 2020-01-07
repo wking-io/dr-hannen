@@ -40,6 +40,10 @@ if ( ! function_exists( 'dh_scripts' ) ) :
 			wp_enqueue_script('dh_about');
 		endif;
 
+		if ( is_category() ) :
+			wp_enqueue_script('dh_category');
+		endif;
+
 	}
 
 endif;
@@ -92,6 +96,11 @@ if ( ! function_exists( 'dh_styles' ) ) :
 
 			if ( is_home() ) :
 				wp_enqueue_style('dh_blog');
+				error_log( print_r( 'why', true ) );
+			endif;
+
+			if ( is_category() ) :
+				wp_enqueue_style('dh_category');
 			endif;
 
 			if ( is_page() && ! is_page_template() ) {

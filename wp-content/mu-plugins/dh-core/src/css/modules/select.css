@@ -1,0 +1,13 @@
+.dh-select {
+  @apply relative font-sans;
+}
+
+.dh-select select {
+  @apply relative border-black appearance-none leading-none p-3 pr-12 h-auto rounded shadow-md text-grey-600;
+  line-height: 1.35;
+}
+
+.dh-select__arrow {
+  top: 50%;
+  transform: translateY(-55%) rotate(270deg);
+}

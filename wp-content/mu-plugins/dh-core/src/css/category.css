@@ -1,0 +1,24 @@
+@import './modules/pattern.css';
+@import './modules/aspect.css';
+@import './modules/select.css';
+
+@screen md {
+  .post-card {
+    width: calc(50% - theme('spacing.8'));
+  }
+}
+
+@screen lg {
+  .post-card {
+    width: calc(100% / 3 - theme('spacing.8'));
+  }
+}
+
+.featured-post--body .featured__overlay {
+  background-image: linear-gradient(
+    to right,
+    rgba(theme('colors.brand.cyan'), 0.9) 40%,
+    rgba(theme('colors.brand.cyan'), 0.65) 70%,
+    rgba(theme('colors.brand.cyan'), 0)
+  );
+}

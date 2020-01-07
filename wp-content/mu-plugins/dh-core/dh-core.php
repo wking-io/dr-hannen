@@ -137,6 +137,7 @@ class DhCore {
       wp_register_style('dh_page', $this->get_asset_url( 'css/page.css' ), array(), '1.0.0' );
       wp_register_style('dh_about', $this->get_asset_url( 'css/about.css' ), array(), '1.0.0' );
       wp_register_style('dh_blog', $this->get_asset_url( 'css/blog.css' ), array(), '1.0.0' );
+      wp_register_style('dh_category', $this->get_asset_url( 'css/category.css' ), array(), '1.0.0' );
 
     }
 
@@ -154,6 +155,7 @@ class DhCore {
       wp_register_script('dh_tv', $this->get_asset_url( 'js/tv.js' ), array( 'jquery' ), '1.0.0', true );
       wp_register_script('dh_media', $this->get_asset_url( 'js/media.js' ), array( 'jquery' ), '1.0.0', true );
       wp_register_script('dh_about', $this->get_asset_url( 'js/about.js' ), array( 'jquery' ), '1.0.0', true );
+      wp_register_script('dh_category', $this->get_asset_url( 'js/category.js' ), array(), '1.0.0', true );
     }
 
     /**

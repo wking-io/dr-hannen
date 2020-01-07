@@ -129,4 +129,35 @@ function dh_display_post ( $category_name = '', $id = 0 ) {
   <?php echo ob_get_clean();
 }
 
+function dh_display_select( $opts = array() ) {
+  $defaults = array(
+    'options'  => array(),
+    'classes'  => '',
+    'name'     => 'default-name',
+    'id'       => 'default-id',
+    'use_key'  => false,
+    'selected' => null,
+    'attrs' => array(),
+  );
+
+  $data = wp_parse_args( $opts, $defaults );
+
+  if ( empty( $data['options'] ) ) :
+    return 'No options were passed.';
+  endif;
+
+  ob_start(); ?>
+    <div class="dh-select <?php echo $data['classes']; ?>">
+			<select class="w-full h-auto" name="<?php echo $data['name']; ?>" id="<?php echo $data['id']; ?>" <?php echo dh_make_attrs( $data['attrs'] ); ?>>
+        <?php foreach ( $data['options'] as $key => $value ) : ?>
+          <option value="<?php echo $data['use_key'] ? esc_attr( $key ) : esc_attr( str_replace( ' ', '-', strtolower( $value ) ) ); ?>" <?php selected( $data['selected'], $data['use_key'] ? $key : $value ) ?>><?php echo esc_html( $value ); ?></option>
+        <?php endforeach; ?>
+      </select>
+      <div class="dh-select__arrow absolute right-0 h-4 mr-3">
+        <?php dh_display_arrow(); ?>
+      </div>
+		</div>
+  <?php echo ob_get_clean();
+}
+
 ?>

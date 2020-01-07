@@ -23,4 +23,23 @@ function dh_category_to_color( $cat = 'body' ) {
       return 'brand-cyan';
       break;
   }
-} 
+}
+
+function dh_get_main_category( $parent, $cats = array() ) {
+  if ( ! empty( $cats ) ) : foreach ( $cats as $cat ) :
+    if ( $cat->parent === $parent->term_id ) :
+      return $cat->name;
+    endif;
+  endforeach; endif;
+
+  return $parent->name;
+}
+
+function dh_make_attrs ( $attrs = array() ) {
+  $result = array();
+  foreach ( $attrs as $k => $v ) :
+    $result[] = $k . '="' . esc_attr( $v ) . '"';
+  endforeach;
+
+  return implode( ' ', $result );
+}
