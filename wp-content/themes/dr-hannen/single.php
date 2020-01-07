@@ -1,18 +1,45 @@
 <?php
 
+
+$parent = get_category( get_cat_ID( $category_name ) );
+$categories = dh_get_post_categories( get_the_category() );
+
 get_header();
 
 ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <article class="">
-    <h2 class="font-serif font-bold text-4xl md:text-5xl leading-tight pt-12 mb-8"><?php echo the_title(); ?></h2>
-    <div class="flex items-center text-grey-600 uppercase text-sm md:text-base lg:text-lg">
-      <p><?php echo esc_html( get_the_author_meta( 'display_name', $rp['post_author'] ) ); ?></p>
-      <span class="h-px w-12 mx-4 bg-grey-600"></span>
-      <p><?php echo esc_html( date_i18n( 'M j, Y', strtotime( $rp['post_date'] ) ) ); ?></p>
+  <article class="w-5/6 max-w-3xl mx-auto mt-24">
+    <?php if ( has_post_thumbnail() ) : ?>
+      <div class="aspect-5:3 rounded overflow-hidden">
+        <?php the_post_thumbnail( 'medium_large', array( 'class' => 'absolute inset-0 w-full h-full object-cover' ) ); ?>
+      </div>
+    <?php endif; ?>
+    <div class="flex items-center justify-between mt-12">
+      <?php if ( ! empty( $categories ) ) : ?>
+        <div class="flex items-center">
+          <?php foreach ( $categories as $parent => $category_name ) : ?>
+            <p class="bg-<?php echo dh_category_to_color( $parent ); ?> rounded dh-shadow z-10 text-white uppercase font-bold px-2 py-1 leading-tight text-sm tracking-wide"><?php echo $category_name; ?></p>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+      <div class="uppercase tracking-wide font-bold flex items-center">
+        <p>Share:</p>
+        <ul class="flex items-center">
+          <li class="h-4 ml-4"><a href="" class="text-black hover:text-brand-cyan"><?php dh_display_twitter(); ?></a></li>
+          <li class="h-4 ml-4"><a href="" class="text-black hover:text-brand-cyan"><?php dh_display_insta(); ?></a></li>
+          <li class="h-4 ml-4"><a href="" class="text-black hover:text-brand-cyan"><?php dh_display_facebook(); ?></a></li>
+          <li class="h-4 ml-4"><a href="" class="text-black hover:text-brand-cyan"><?php dh_display_pinterest(); ?></a></li>
+        </ul>
+      </div>
     </div>
-    <div class="general-content pt-16 mb-8"><?php the_content(); ?></div>
+    <h2 class="font-serif font-bold text-4xl md:text-5xl leading-tight mt-6"><?php echo the_title(); ?></h2>
+    <div class="flex items-center text-grey-600 uppercase text-sm md:text-base lg:text-lg">
+      <p><?php the_author_meta( 'display_name' ); ?></p>
+      <span class="h-px w-12 mx-4 bg-grey-600"></span>
+      <p><?php the_date( 'M j, Y' ); ?></p>
+    </div>
+    <div class="dh-content pt-8 mb-8"><?php the_content(); ?></div>
   </article>
 <?php endwhile; else: ?>
   <p>Sorry, no posts matched your criteria.</p>

@@ -102,6 +102,10 @@ if ( ! function_exists( 'dh_styles' ) ) :
 				wp_enqueue_style('dh_category');
 			endif;
 
+			if ( is_singular( 'post' ) ) :
+				wp_enqueue_style('dh_single');
+			endif;
+
 			if ( is_page() && ! is_page_template() ) {
 				wp_enqueue_style('dh_page');
 			}

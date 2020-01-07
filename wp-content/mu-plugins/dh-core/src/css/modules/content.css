@@ -18,19 +18,19 @@
 }
 
 .dh-content blockquote > p {
-  @apply text-lg leading-relaxed mt-8;
+  @apply text-lg leading-relaxed;
 }
 
 .dh-content blockquote > cite {
-  @apply font-bold not-italic;
+  @apply font-bold not-italic mt-4 block;
 }
 
 .dh-content ul {
-  @apply list-disc ml-8 mb-8;
+  @apply list-disc ml-8 mb-8 mt-8;
 }
 
 .dh-content ol {
-  @apply list-decimal ml-8 mb-8;
+  @apply list-decimal ml-8 mb-8 mt-8;
 }
 
 .dh-content li {

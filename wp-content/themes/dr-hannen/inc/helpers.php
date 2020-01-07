@@ -56,3 +56,18 @@ function dh_make_attrs ( $attrs = array() ) {
 
   return implode( ' ', $result );
 }
+
+function dh_get_post_categories( $categories = array() ) {
+  $children = array();
+  $parents = array();
+
+  foreach ( $categories as $cat ) :
+    if ( ! empty( $cat->parent ) ) :
+      $children[ dh_get_parent_category( $cat->name ) ] = $cat->name;
+    else :
+      $parents[ strtolower( $cat->name ) ] = $cat->name;
+    endif;
+  endforeach;
+
+  return ! empty( $children ) ? $children : $parents;
+}
