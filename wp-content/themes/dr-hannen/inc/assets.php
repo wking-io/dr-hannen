@@ -96,7 +96,6 @@ if ( ! function_exists( 'dh_styles' ) ) :
 
 			if ( is_home() ) :
 				wp_enqueue_style('dh_blog');
-				error_log( print_r( 'why', true ) );
 			endif;
 
 			if ( is_category() ) :

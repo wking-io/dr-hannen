@@ -28,11 +28,24 @@ function dh_category_to_color( $cat = 'body' ) {
 function dh_get_main_category( $parent, $cats = array() ) {
   if ( ! empty( $cats ) ) : foreach ( $cats as $cat ) :
     if ( $cat->parent === $parent->term_id ) :
-      return $cat->name;
+      return strtolower( $cat->name );
     endif;
   endforeach; endif;
 
-  return $parent->name;
+  return strtolower( $parent->name );
+}
+
+function dh_get_parent_category( $category ) {
+  if ( ! empty( $category ) ) :
+    $cat_obj = get_category( get_cat_ID( $category ) );
+    $parent = get_category( $cat_obj->parent );
+
+    if ( ! empty( $parent ) && ! is_wp_error( $parent ) ) :
+      return dh_get_parent_category( $parent->name );
+    else :
+      return strtolower( $category );
+    endif;
+  endif;
 }
 
 function dh_make_attrs ( $attrs = array() ) {

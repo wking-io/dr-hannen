@@ -22,3 +22,21 @@
     rgba(theme('colors.brand.cyan'), 0)
   );
 }
+
+.featured-post--soul .featured__overlay {
+  background-image: linear-gradient(
+    to right,
+    rgba(theme('colors.brand.blue'), 0.9) 40%,
+    rgba(theme('colors.brand.blue'), 0.65) 70%,
+    rgba(theme('colors.brand.blue'), 0)
+  );
+}
+
+.featured-post--spirit .featured__overlay {
+  background-image: linear-gradient(
+    to right,
+    rgba(theme('colors.brand.navy'), 0.9) 40%,
+    rgba(theme('colors.brand.navy'), 0.65) 70%,
+    rgba(theme('colors.brand.navy'), 0)
+  );
+}

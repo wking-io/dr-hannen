@@ -57,17 +57,21 @@ get_header(); ?>
       <?php if ( $category['custom'] ) : ?>
         <?php if ( ! empty( $category['posts'] ) ) : ?>
           <ul class="flex flex-col md:flex-row flex-wrap md:-mx-4 md:-mt-8">
-            <?php foreach ( $category['posts'] as $the ) : ?>
-              <?php dh_display_post( $category_name, $the['post'] ); ?>
-            <?php endforeach; ?>
+            <?php foreach ( $category['posts'] as $the ) :
+              $parent = get_category( get_cat_ID( $category_name ) );
+              $child = dh_get_main_category( $parent, get_the_category( $the['post'] ) );
+              dh_display_post( $child, $the['post'] );
+            endforeach; ?>
           </ul>
         <?php endif; ?>
       <?php else : ?>
         <?php if ( $category['posts']->have_posts() ) : ?>
           <ul class="flex flex-col md:flex-row flex-wrap md:-mx-4 md:-mt-8">
-            <?php while ( $category['posts']->have_posts() ) : $category['posts']->the_post(); ?>
-              <?php dh_display_post( $category_name, get_the_ID() ); ?>
-            <?php endwhile; ?>
+            <?php while ( $category['posts']->have_posts() ) : $category['posts']->the_post();
+              $parent = get_category( get_cat_ID( $category_name ) );
+              $child = dh_get_main_category( $parent, get_the_category( $the['post'] ) );
+              dh_display_post( $child, get_the_ID() );
+            endwhile; ?>
           </ul>
         <?php endif; ?>
       <?php endif; ?>

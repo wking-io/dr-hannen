@@ -16,6 +16,8 @@ endforeach;
 $featured = new WP_Query( array(
   'category_name' => $parent->name,
   'posts_per_page' => 1,
+  'order' => 'ASC',
+  'orderby' => 'menu_order'
 ) );
 
 get_header(); ?>
@@ -30,11 +32,11 @@ get_header(); ?>
               <?php the_post_thumbnail( 'large', array( 'class' => 'w-full h-full object-cover' ) ); ?>
               <div class="featured__overlay absolute inset-0 top-0 left-0"></div>
             </div>
-            <div class="aspect-content p-16 flex flex-col items-start relative h-full w-1/2 max-w-3xl">
-              <h3 class="uppercase font-bold tracking-wide text-lg lg:text-xl"><?php echo dh_get_main_category( $parent, get_the_category() ); ?></h3>
-              <h2 class="font-extrabold text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-12 md:mt-40"><?php the_title(); ?></h2>
+            <div class="aspect-content p-16 flex flex-col items-start relative h-full w-3/5 max-w-3xl">
+              <h3 class="uppercase font-bold tracking-wide text-lg lg:text-xl flex-1"><?php echo dh_get_main_category( $parent, get_the_category( get_the_ID() ) ); ?></h3>
+              <h2 class="font-extrabold text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-12"><?php the_title(); ?></h2>
               <div class="mt-8 leading-relaxed md:text-lg xl:text-xl"><?php the_excerpt(); ?></div>
-              <p class="mt-16"><a class="inline-block border border-white rounded py-3 px-12 font-bold" href="<?php the_permalink(); ?>">Read This Article</a></p>
+              <p class="flex-1 mt-12"><a class="inline-block border border-white rounded py-3 px-12 font-bold" href="<?php the_permalink(); ?>">Read This Article</a></p>
             </div>
           </div>
         <?php endwhile; ?>
