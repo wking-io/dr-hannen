@@ -34,10 +34,15 @@ get_header();
       </div>
     </div>
     <h2 class="font-serif font-bold text-4xl md:text-5xl leading-tight mt-6"><?php echo the_title(); ?></h2>
-    <div class="flex items-center text-grey-600 uppercase text-sm md:text-base lg:text-lg">
-      <p><?php the_author_meta( 'display_name' ); ?></p>
-      <span class="h-px w-12 mx-4 bg-grey-600"></span>
-      <p><?php the_date( 'M j, Y' ); ?></p>
+    <div class="flex items-center text-grey-400 font-semibold text-sm md:text-base lg:text-lg mt-6">
+      <p class="flex items-center mr-8">
+        <span class="h-4"><?php dh_display_author(); ?></span>
+        <span class="ml-3 text-grey-900"><?php the_author_meta( 'display_name' ); ?></span>
+      </p>
+      <p class="flex items-center">
+        <span class="h-4"><?php dh_display_date(); ?></span>
+        <span class="ml-3 text-grey-900"><?php the_date( 'M j, Y' ); ?></span>
+      </p>
     </div>
     <div class="dh-content pt-8 mb-8"><?php the_content(); ?></div>
   </article>
