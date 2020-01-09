@@ -41,7 +41,7 @@ get_header(); ?>
     </section>
   <?php endif; ?>
   <?php if ( ! empty( $consult ) ) : ?>
-    <section class="w-5/6 mx-auto md:w-9/12 md:mr-0 mt-24">
+    <section class="w-5/6 mx-auto md:w-9/12 md:mr-0 mt-24" id="consult">
     <div class="md:w-5/6">
       <h4 class="uppercase text-brand-cyan font-bold md:text-lg lg:text-xl tracking-wide"><?php echo $consult['subheading']; ?></h4>
       <h3 class="mt-3 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight max-w-5xl"><?php echo $consult['heading']; ?></h3>
@@ -60,7 +60,7 @@ get_header(); ?>
     </section>
   <?php endif; ?>
   <?php if ( ! empty( $survey ) ) : ?>
-    <section class="w-5/6 mx-auto md:w-9/12 md:mr-0 mt-24">
+    <section class="w-5/6 mx-auto md:w-9/12 md:mr-0 mt-24" id="survey">
     <div class="md:w-5/6">
       <h4 class="uppercase text-brand-cyan font-bold md:text-lg lg:text-xl tracking-wide"><?php echo $survey['subheading']; ?></h4>
       <h3 class="mt-3 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight max-w-5xl"><?php echo $survey['heading']; ?></h3>

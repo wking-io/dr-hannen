@@ -48,7 +48,9 @@ get_header(); ?>
     <section>
       <div id="marquee" class="marquee mt-24">
         <?php foreach ( $gallery as $photo ) : ?>
-          <?php echo wp_get_attachment_image( $photo['ID'], 'medium_large' ); ?>
+          <div class="aspect-4:3">
+            <?php echo wp_get_attachment_image( $photo['ID'], 'medium_large', false, array( 'class' => 'absolute inset-0 w-full h-full object-cover' ) ); ?>
+          </div>
         <?php endforeach; ?>
       </div>
     </section>

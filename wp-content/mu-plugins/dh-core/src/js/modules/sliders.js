@@ -3,7 +3,6 @@ export function marquee(context, speed) {
   jQuery(context).slick({
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 0,

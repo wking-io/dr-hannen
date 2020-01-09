@@ -3,14 +3,4 @@
 @import './modules/pattern.css';
 @import './modules/selling-point.css';
 @import './modules/marquee.css';
-
-.show-time {
-  @apply relative;
-}
-
-.show-time:not(:first-child):before {
-  @apply absolute left-0 w-px bg-brand-cyan h-12;
-  content: '';
-  top: 50%;
-  transform: translateY(-50%);
-}
+@import './modules/aspect.css';

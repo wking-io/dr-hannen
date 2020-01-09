@@ -3,6 +3,7 @@
 @import './modules/pattern.css';
 @import './modules/selling-point.css';
 @import './modules/marquee.css';
+@import './modules/aspect.css';
 
 .testimonial {
   @apply w-full;

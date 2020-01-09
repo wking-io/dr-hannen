@@ -48,7 +48,9 @@ get_header(); ?>
     <section>
       <div id="marquee" class="marquee mt-24">
         <?php foreach ( $gallery as $photo ) : ?>
-          <?php echo wp_get_attachment_image( $photo['ID'], 'medium_large' ); ?>
+          <div class="aspect-4:3">
+            <?php echo wp_get_attachment_image( $photo['ID'], 'medium_large', false, array( 'class' => 'absolute inset-0 w-full h-full object-cover' ) ); ?>
+          </div>
         <?php endforeach; ?>
       </div>
     </section>
@@ -58,11 +60,11 @@ get_header(); ?>
       <div class="w-5/6 max-w-4xl mx-auto">
         <h3 class="uppercase text-brand-cyan font-bold md:text-lg lg:text-xl tracking-wide"><?php echo $show_times['subheading']; ?></h3>
         <h2 class="mt-3 text-3xl md:text-4xl lg:text-5xl text-center font-extrabold leading-tight"><?php echo $show_times['heading']; ?></h2>
-        <div class="show-time-list flex items-center justify-center flex-col md:flex-row mt-12">
+        <div class="show-time-list mt-12">
         <?php foreach ( $show_times['times'] as $time ) : ?>
-          <div class="show-time px-8 flex-1">
+          <div class="show-time py-8 flex items-center justify-between border-b-2 border-grey-200 last:border-0">
             <p class="text-xl md:text-2xl font-bold"><?php echo $time['day']; ?></p>
-            <p><?php echo $time['time']; ?></p>
+            <p class="text-xl md:text-2xl"><?php echo $time['time']; ?></p>
           </div>
         <?php endforeach; ?>
         </div>

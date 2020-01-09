@@ -1,14 +1,23 @@
 .marquee .slick-track {
   @apply mb-4;
-  height: 200px;
 }
 
 .marquee .slick-slide {
-  @apply h-full w-auto rounded ml-4;
+  @apply rounded ml-4;
+  width: 90vw;
 }
 
 @screen md {
-  .marquee .slick-track {
-    height: 300px;
+  .marquee .slick-slide {
+    @apply rounded ml-4;
+    width: 33vw;
   }
 }
+
+@screen lg {
+  .marquee .slick-slide {
+    @apply rounded ml-4;
+    width: 25vw;
+  }
+}
+
