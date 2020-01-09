@@ -25,6 +25,16 @@ function dh_category_to_color( $cat = 'body' ) {
   }
 }
 
+function dh_get_first_category( $cats = array() ) {
+  if ( ! empty( $cats ) ) : foreach ( $cats as $cat ) :
+    if ( 0 === $cat->parent ) :
+      return $cat->name;
+    endif;
+  endforeach; endif;
+
+  return '';
+}
+
 function dh_get_main_category( $parent, $cats = array() ) {
   if ( ! empty( $cats ) ) : foreach ( $cats as $cat ) :
     if ( $cat->parent === $parent->term_id ) :

@@ -166,7 +166,9 @@ function dh_display_post ( $category_name = '', $id = 0 ) {
   ob_start(); ?>
     <li class="post-card rounded shadow-md flex flex-col bg-white overflow-hidden md:mx-4 mt-8">
       <div class="aspect-5:3 w-full">
-        <p class="absolute top-0 left-0 mt-4 ml-4 bg-<?php echo dh_category_to_color( dh_get_parent_category( $category_name ) ); ?> rounded dh-shadow z-10 text-white uppercase font-bold px-2 py-1 leading-tight text-sm tracking-wide"><?php echo $category_name; ?></p>
+        <?php if ( ! empty( $category_name ) ) : ?>
+          <p class="absolute top-0 left-0 mt-4 ml-4 bg-<?php echo dh_category_to_color( dh_get_parent_category( $category_name ) ); ?> rounded dh-shadow z-10 text-white uppercase font-bold px-2 py-1 leading-tight text-sm tracking-wide"><?php echo $category_name; ?></p>
+        <?php endif; ?>
         <div class="aspect-content">
           <?php echo get_the_post_thumbnail( $id, 'medium', array( 'class' => 'w-full h-full object-cover' ) ); ?>
         </div>

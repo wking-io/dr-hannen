@@ -1,0 +1,14 @@
+@import './modules/pattern.css';
+@import './modules/aspect.css';
+
+@screen md {
+  .post-card {
+    width: calc(50% - theme('spacing.8'));
+  }
+}
+
+@screen lg {
+  .post-card {
+    width: calc(100% / 3 - theme('spacing.8'));
+  }
+}

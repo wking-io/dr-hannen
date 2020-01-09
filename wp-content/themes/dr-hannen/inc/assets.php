@@ -106,6 +106,10 @@ if ( ! function_exists( 'dh_styles' ) ) :
 				wp_enqueue_style('dh_single');
 			endif;
 
+			if ( is_search() ) :
+				wp_enqueue_style('dh_search');
+			endif;
+
 			if ( is_page() && ! is_page_template() ) {
 				wp_enqueue_style('dh_page');
 			}
