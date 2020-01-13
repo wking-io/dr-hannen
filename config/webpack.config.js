@@ -3,7 +3,6 @@
 const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
 const paths = require('./paths');
 
 // Options for PostCSS as we reference these options twice
