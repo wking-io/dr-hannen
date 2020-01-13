@@ -12,6 +12,10 @@ get_header(); ?>
           dh_display_post( $category_name, get_the_ID() );
         endwhile; ?>
       </ul>
+      <div class="post-nav flex items-center justify-between mt-12 p-0">
+        <?php next_posts_link( 'Older Articles' ); ?>
+        <?php previous_posts_link( 'Newer Articles' ); ?>
+      </div>
     </section>
   <?php else : ?>
     <h3 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">Sorry, there are no posts for the search term: <?php the_search_query(); ?></h3>

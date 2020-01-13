@@ -1,0 +1,3 @@
+.post-nav a {
+  @apply border font-bold py-3 px-8 bg-transparent cursor-pointer rounded;
+}

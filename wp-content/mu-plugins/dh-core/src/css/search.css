@@ -1,5 +1,6 @@
 @import './modules/pattern.css';
 @import './modules/aspect.css';
+@import './modules/post-nav.css';
 
 @screen md {
   .post-card {

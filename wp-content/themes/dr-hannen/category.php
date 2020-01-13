@@ -24,8 +24,8 @@ get_header(); ?>
 
 <main>
   <?php if ( have_posts() ) : ?>
-    <section class="w-11/12 mx-auto rounded overflow-hidden mt-8 dh-shadow">
-    <?php if ( $featured->have_posts() ) : ?>
+    <?php if ( $featured->have_posts() && ! is_paged() ) : ?>
+      <section class="w-11/12 mx-auto rounded overflow-hidden mt-8 dh-shadow">
         <?php while ( $featured->have_posts() ) : $featured->the_post(); ?>
           <div class="featured-post featured-post--<?php echo strtolower( $parent->name ); ?> relative md:aspect-16:9 text-white">
             <div class="absolute inset-0 top-0 left-0">
@@ -40,9 +40,9 @@ get_header(); ?>
             </div>
           </div>
         <?php endwhile; ?>
+      </section>
     <?php endif; ?>
-    </section>
-    <section class="w-11/12 mx-auto mt-16 md:mt-24 pb-24">
+    <section class="w-11/12 mx-auto <?php echo is_paged() ? 'mt-16' : 'mt-16 md:mt-24'; ?> pb-24">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <h3 class="capitalize text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">All Articles On <?php echo $parent->name; ?> Health</h3>
         <?php if ( ! empty( $categories ) ) : ?>
@@ -61,6 +61,10 @@ get_header(); ?>
           dh_display_post( $category_name, get_the_ID() );
         endwhile; ?>
       </ul>
+      <div class="post-nav flex items-center justify-between mt-12 p-0">
+        <?php next_posts_link( 'Older Articles' ); ?>
+        <?php previous_posts_link( 'Newer Articles' ); ?>
+      </div>
     </section>
   <?php else : ?>
     <p>Sorry, there are no posts for this category.</p>
