@@ -3,7 +3,7 @@
 }
 
 .marquee .slick-slide {
-  @apply rounded ml-4;
+  @apply rounded ml-4 outline-none;
   width: 90vw;
 }
 
@@ -20,4 +20,3 @@
     width: 25vw;
   }
 }
-

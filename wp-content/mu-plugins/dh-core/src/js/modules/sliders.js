@@ -9,7 +9,13 @@ export function marquee(context, speed) {
     speed: speed,
     dots: false,
     variableWidth: true,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    draggable: false,
+    focusOnSelect: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    swipe: false,
+    touchMove: false
   });
 }
 
