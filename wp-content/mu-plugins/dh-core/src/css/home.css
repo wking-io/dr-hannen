@@ -23,13 +23,10 @@
     transition: opacity 0.2s ease-in;
   }
 
-  [data-video-state="complete"] .hero-video-frame {
-    @apply opacity-0;
-  }
-
   [data-video-state="complete"] .hero-video-after,
   [data-video-state="complete"] .hero-video-img {
     @apply opacity-100;
+    transition: opacity 0.75s ease-in;
   }
 }
 
