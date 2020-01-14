@@ -45,7 +45,7 @@ if ( ! is_page( 'who-we-are' ) ) {
 				'walker' => new Footer_Menu()
 			) ); ?>
 
-			<div class="w-5/6 mx-auto mt-16">
+			<div class="w-5/6 mx-auto mt-16 max-w-3xl">
 				<?php dh_display_ad(); ?>
 			</div>
 

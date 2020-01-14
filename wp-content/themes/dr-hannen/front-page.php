@@ -59,12 +59,12 @@ endif;
               )
             ); 
           ?>
-          <?php echo wp_get_attachment_image( $hero['background'], 'large', false, array( 'class' => 'hero-video-img object-cover w-full h-full absolute inset-0 z-10' ) ); ?>
-          <div class="hero-video-after md:opacity-0 text-white pt-24 pb-12 px-8 md:p-12 lg:p-20 xl:py-32 flex flex-col items-start justify-end relative md:absolute inset-0 z-20">
-            <h3 class="font-bold text-sm md:text-xl uppercase tracking-wide"><?php echo $hero['subheading']; ?></h3>
+          <?php echo wp_get_attachment_image( $hero['background'], 'large', false, array( 'class' => 'hero-video-img object-cover w-full h-full absolute inset-0 z-10 hidden md:block' ) ); ?><?php echo wp_get_attachment_image( $hero['background_mobile'], 'medium', false, array( 'class' => 'hero-video-img object-cover w-full h-full absolute inset-0 z-10 md:hidden' ) ); ?>
+          <div class="hero-video-after md:opacity-0 text-white pt-40 pb-12 px-8 md:p-12 lg:p-20 xl:py-32 flex flex-col items-start justify-end relative md:absolute inset-0 z-20">
+            <h3 class="hidden md:block font-bold text-sm md:text-xl uppercase tracking-wide"><?php echo $hero['subheading']; ?></h3>
             <h2 class="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-4 md:mt-1 leading-tight"><?php echo $hero['heading']; ?></h2>
-            <p class="md:text-xl mt-8"><?php echo $hero['show_times']; ?></p>
-            <a class="text-sm md:text-base bg-gradient font-bold py-3 px-12 rounded mt-6" href="<?php echo $hero['button']['link']; ?>"><?php echo $hero['button']['text']; ?></a>
+            <p class="md:text-xl mt-4 md:mt-8"><?php echo $hero['show_times']; ?></p>
+            <a class="text-sm md:text-base bg-gradient font-bold py-3 px-12 rounded mt-12 md:mt-6" href="<?php echo $hero['button']['link']; ?>"><?php echo $hero['button']['text']; ?></a>
           </div>
         </div>
       </div>
