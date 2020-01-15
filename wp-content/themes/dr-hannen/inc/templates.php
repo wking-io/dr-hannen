@@ -122,7 +122,7 @@ function dh_display_ad() {
   ob_start(); ?>
     <div class="w-full">
       <a class="flex flex-col sm:flex-row relative rounded overflow-hidden" href="<?php the_field( 'ad_link', 'options' ); ?>">
-        <?php echo wp_get_attachment_image( get_field( 'ad_image', 'options' ), 'medium', false, array( 'class' => 'absolute left-0 top-0 h-20 sm:h-full w-full object-cover sm:w-auto', 'aria-hidden' => true ) ); ?>
+        <?php echo wp_get_attachment_image( get_field( 'ad_image', 'options' ), 'medium_large', false, array( 'class' => 'absolute left-0 top-0 h-20 sm:h-full w-full object-cover sm:w-auto', 'aria-hidden' => true ) ); ?>
         <div class="ad_content w-full relative z-10 flex justify-end pt-16 sm:pt-4 p-4">
           <div class="w-full md:w-8/12 lg:w-7/12 flex flex-col items-center justify-center">
             <div class="text-center md:text-left">
@@ -170,7 +170,7 @@ function dh_display_post ( $category_name = '', $id = 0 ) {
           <p class="absolute top-0 left-0 mt-4 ml-4 bg-<?php echo dh_category_to_color( dh_get_parent_category( $category_name ) ); ?> rounded dh-shadow z-10 text-white uppercase font-bold px-2 py-1 leading-tight text-sm tracking-wide"><?php echo $category_name; ?></p>
         <?php endif; ?>
         <div class="aspect-content">
-          <?php echo get_the_post_thumbnail( $id, 'medium', array( 'class' => 'w-full h-full object-cover' ) ); ?>
+          <?php echo get_the_post_thumbnail( $id, 'large', array( 'class' => 'w-full h-full object-cover' ) ); ?>
         </div>
       </div>
       <div class="p-6 flex flex-col h-full">

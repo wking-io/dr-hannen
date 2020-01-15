@@ -59,7 +59,7 @@ endif;
               )
             ); 
           ?>
-          <?php echo wp_get_attachment_image( $hero['background'], 'large', false, array( 'class' => 'hero-video-img object-cover w-full h-full absolute inset-0 z-10 hidden md:block' ) ); ?><?php echo wp_get_attachment_image( $hero['background_mobile'], 'medium', false, array( 'class' => 'hero-video-img object-cover w-full h-full absolute inset-0 z-10 md:hidden' ) ); ?>
+          <?php echo wp_get_attachment_image( $hero['background'], 'large', false, array( 'class' => 'hero-video-img object-cover w-full h-full absolute inset-0 z-10 hidden md:block' ) ); ?><?php echo wp_get_attachment_image( $hero['background_mobile'], 'large', false, array( 'class' => 'hero-video-img object-cover w-full h-full absolute inset-0 z-10 md:hidden' ) ); ?>
           <div class="hero-video-after md:opacity-0 text-white pt-40 pb-12 px-8 md:p-12 lg:p-20 xl:py-32 flex flex-col items-start justify-end relative md:absolute inset-0 z-20">
             <h3 class="hidden md:block font-bold text-sm md:text-xl uppercase tracking-wide"><?php echo $hero['subheading']; ?></h3>
             <h2 class="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-4 md:mt-1 leading-tight"><?php echo $hero['heading']; ?></h2>
@@ -98,7 +98,7 @@ endif;
           <div class="w-full md:w-auto flex flex-col md:flex-row mx-auto md:-mx-8">
             <?php foreach ( array( $clinic, $appt ) as $callout ) : ?>
               <div class="callout rounded overflow-hidden shadow-md bg-white mt-8">
-                <?php echo wp_get_attachment_image( $callout['image'], 'medium', false, array( 'class' => 'w-full block' ) ); ?>
+                <?php echo wp_get_attachment_image( $callout['image'], 'large', false, array( 'class' => 'w-full block' ) ); ?>
                 <div class="p-8">
                   <h3 class="text-xl font-bold"><?php echo $callout['heading']; ?></h3>
                   <div class="dh-content -mt-2 text-sm"><?php echo $callout['content']; ?></div>

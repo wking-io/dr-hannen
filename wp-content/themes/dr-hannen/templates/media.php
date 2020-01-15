@@ -35,7 +35,7 @@ get_header(); ?>
         <?php foreach ( $photos as $id => $photo ) : ?>
           <div class="bg-white rounded shadow-md m-2 aspect-5:3 photo-card overflow-hidden">
             <div class="aspect-content">
-              <?php echo wp_get_attachment_image( $photo['ID'], 'medium', false, array( 'class' => 'w-full h-full object-cover') ); ?>
+              <?php echo wp_get_attachment_image( $photo['ID'], 'large', false, array( 'class' => 'w-full h-full object-cover') ); ?>
             </div>
           </div>
         <?php endforeach; ?>
@@ -113,7 +113,7 @@ get_header(); ?>
           <li class="aspect-4:3 overflow-hidden mx-8 md:mx-12 partner mt-12">
             <div class="aspect-content">
               <p class="visually-hidden"><?php echo $partner['name']; ?></p>
-              <?php echo wp_get_attachment_image( $partner['logo'], 'medium', false, array( 'class' => 'w-full h-full object-cover', 'aria-hidden' => 'true') ); ?>
+              <?php echo wp_get_attachment_image( $partner['logo'], 'large', false, array( 'class' => 'w-full h-full object-cover', 'aria-hidden' => 'true') ); ?>
             </div>
           </li>
         <?php endforeach; ?>
