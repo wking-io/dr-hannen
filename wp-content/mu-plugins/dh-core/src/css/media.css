@@ -8,7 +8,7 @@
 
 @screen md {
   .slider {
-    width: calc( 100% / 24 * 23 );
+    width: calc(100% / 24 * 23);
   }
 }
 
@@ -21,7 +21,7 @@
 }
 
 .popup-bg {
-  background-image: linear-gradient( rgba(theme('colors.black'), 0.8), rgba(theme('colors.black'), 0.8));
+  background-image: linear-gradient(rgba(theme('colors.black'), 0.8), rgba(theme('colors.black'), 0.8));
 }
 
 .popup iframe {
@@ -36,6 +36,16 @@
   overflow: visible;
 }
 
+.photo-card {
+  width: 280px;
+}
+
+@screen md {
+  .photo-card {
+    width: 475px;
+  }
+}
+
 .media-card {
   width: 280px;
 }
@@ -47,11 +57,11 @@
 }
 
 .partner {
-  width: calc( 100% / 2 - theme('spacing.16'));
+  width: calc(100% / 2 - theme('spacing.16'));
 }
 
 @screen md {
   .partner {
-    width: calc( 100% / 3 - theme('spacing.24'));
+    width: calc(100% / 3 - theme('spacing.24'));
   }
 }

@@ -54,7 +54,7 @@ get_header(); ?>
         <div class="dh-content pt-2">
           <?php echo $consult['form_box']['content']; ?>
         </div>
-        <button class="bg-gradient text-white font-bold py-3 px-12 mt-8 rounded">Book Appointment Now</button>
+        <button class="bg-gradient text-white font-bold py-3 px-12 mt-8 rounded"><?php echo $consult['form_box']['button']; ?></button>
       </div>
     </div>
     </section>
@@ -73,7 +73,7 @@ get_header(); ?>
         <div class="dh-content pt-2">
           <?php echo $survey['form_box']['content']; ?>
         </div>
-        <button class="bg-gradient text-white font-bold py-3 px-12 mt-8 rounded">Take Survey</button>
+        <button class="bg-gradient text-white font-bold py-3 px-12 mt-8 rounded"><?php echo $survey['form_box']['button']; ?></button>
       </div>
     </div>
     </section>
