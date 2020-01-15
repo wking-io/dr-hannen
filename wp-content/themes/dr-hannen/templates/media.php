@@ -15,7 +15,7 @@ get_header(); ?>
 
   <div class="w-5/6 md:w-11/12 max-w-6xl mx-auto mt-16 md:mt-24 lg:mt-32">
     <h2 class="uppercase tracking-wide text-brand-cyan md:text-lg font-bold"><?php the_field('subheading'); ?></h2>
-    <h3 class="text-2xl md:text-3xl lg:text-6xl max-w-2xl font-extrabold leading-tight mt-4"><?php the_field('heading'); ?></h3>
+    <h3 class="text-2xl md:text-3xl lg:text-6xl max-w-4xl font-extrabold leading-tight mt-4"><?php the_field('heading'); ?></h3>
   </div>
 
   <?php if ( ! empty( $photos ) ) : ?>
