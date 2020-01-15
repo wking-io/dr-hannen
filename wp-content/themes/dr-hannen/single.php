@@ -44,7 +44,8 @@ get_header();
         <span class="ml-3 text-grey-900"><?php the_date( 'M j, Y' ); ?></span>
       </p>
     </div>
-    <div class="dh-content pt-8 mb-8"><?php the_content(); ?></div>
+    <div class="dh-content pt-8"><?php the_content(); ?></div>
+    <p class="mt-12 pb-24"><a class="inline-block border bg-transparent cursor-pointer py-3 px-12 rounded font-bold" href="<?php echo get_home_url(); ?>">Back to all articles</a></p>
   </article>
 <?php endwhile; else: ?>
   <p>Sorry, no posts matched your criteria.</p>

@@ -9,7 +9,7 @@ $clinics = get_field('clinics');
 get_header(); ?>
 
 <main class="w-5/6 mx-auto max-w-4xl mt-16 md:mt-24 pb-24 md:pb-32 lg:pb-40">
-  <h2 class="mt-3 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">Find a clinic near you</h2>
+  <h2 class="mt-3 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"><?php the_field('heading'); ?></h2>
   <?php if ( ! empty ( $clinics ) ) : ?>
     <ul class="mt-8 md:mt-16">
       <?php foreach ( $clinics as $clinic ) : ?>

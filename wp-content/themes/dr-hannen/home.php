@@ -56,7 +56,7 @@ get_header(); ?>
       </div>
       <?php if ( $category['custom'] ) : ?>
         <?php if ( ! empty( $category['posts'] ) ) : ?>
-          <ul class="flex flex-col md:flex-row flex-wrap md:-mx-4 md:-mt-8">
+          <ul class="flex flex-col md:flex-row flex-wrap md:-mx-4 md:-mt-8 w-full">
             <?php foreach ( $category['posts'] as $the ) :
               $parent = get_category( get_cat_ID( $category_name ) );
               $child = dh_get_main_category( $parent, get_the_category( $the['post'] ) );
@@ -66,7 +66,7 @@ get_header(); ?>
         <?php endif; ?>
       <?php else : ?>
         <?php if ( $category['posts']->have_posts() ) : ?>
-          <ul class="flex flex-col md:flex-row flex-wrap md:-mx-4 md:-mt-8">
+          <ul class="flex flex-col md:flex-row flex-wrap md:-mx-4 md:-mt-8 w-full">
             <?php while ( $category['posts']->have_posts() ) : $category['posts']->the_post();
               $parent = get_category( get_cat_ID( $category_name ) );
               $child = dh_get_main_category( $parent, get_the_category( $the['post'] ) );
