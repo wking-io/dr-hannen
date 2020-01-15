@@ -61,7 +61,7 @@ get_header(); ?>
           <div class="bg-white rounded shadow-md m-2 media-card overflow-hidden">
             <button class="flex bg-white text-left" data-popup-control aria-controls="video-<?php echo $id; ?>" title="<?php echo $video['title']; ?>">
               <div class="flex items-center w-12 p-4 bg-gradient flex-shrink-0"><?php dh_display_play(); ?></div>
-              <p class="font-bold p-4"><?php echo wp_html_excerpt( $video['title'], 36, '...' ); ?></p>
+              <p class="font-bold p-4"><?php echo $video['title']; ?></p>
             </button>
           </div>
         <?php endforeach; ?>
@@ -97,7 +97,7 @@ get_header(); ?>
           <div class="bg-white rounded shadow-md m-2 media-card overflow-hidden">
             <a class="flex" href="<?php echo $article['link']; ?>" title="<?php echo $article['title']; ?>">
               <div class="flex items-center w-12 p-4 bg-gradient flex-shrink-0"><?php dh_display_link(); ?></div>
-              <p class="font-bold p-4"><?php echo wp_html_excerpt( $article['title'], 36, '...' ); ?></p>
+              <p class="font-bold p-4"><?php echo $article['title']; ?></p>
             </a>
           </div>
         <?php endforeach; ?>

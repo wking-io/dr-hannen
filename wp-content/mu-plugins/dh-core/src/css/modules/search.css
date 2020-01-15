@@ -7,7 +7,7 @@
 /* Header Specific Search CSS */
 
 .header .search-form {
-  @apply hidden;
+  @apply hidden z-50;
 }
 
 .header .search-submit {

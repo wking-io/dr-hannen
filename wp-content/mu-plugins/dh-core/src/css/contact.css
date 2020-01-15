@@ -1,5 +1,6 @@
 .gform_heading,
-.validation_error {
+.validation_error,
+.gform_validation_container {
   @apply hidden;
 }
 
@@ -23,7 +24,7 @@
   @apply flex flex-col flex-1 mt-6;
 }
 
-.gform_fields:last-child .gfield {
+.gform_fields:last-child .gfield:first-child {
   @apply flex-1 flex flex-col;
 }
 

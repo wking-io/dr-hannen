@@ -1,6 +1,6 @@
 <?php ?>
 
-<form role="search" method="get" class="search-form flex flex-col md:flex-row items-center relative z-50" action="<?php echo home_url( '/' ); ?>">
+<form role="search" method="get" class="search-form flex flex-col md:flex-row items-center relative" action="<?php echo home_url( '/' ); ?>">
     <input type="hidden" value="post" name="post_type" id="post_type" />
     <label class="relative block">
         <span class="visually-hidden"><?php echo _x( 'Search for:', 'label' ) ?></span>
