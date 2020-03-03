@@ -201,7 +201,7 @@ function dh_display_select( $opts = array() ) {
 
   ob_start(); ?>
     <div class="dh-select <?php echo $data['classes']; ?>">
-			<select class="w-full h-auto" name="<?php echo $data['name']; ?>" id="<?php echo $data['id']; ?>" <?php echo dh_make_attrs( $data['attrs'] ); ?>>
+			<select name="<?php echo $data['name']; ?>" id="<?php echo $data['id']; ?>" <?php echo dh_make_attrs( $data['attrs'] ); ?>>
         <?php foreach ( $data['options'] as $key => $value ) : ?>
           <option value="<?php echo $data['use_key'] ? esc_attr( $key ) : esc_attr( str_replace( ' ', '-', strtolower( $value ) ) ); ?>" <?php selected( $data['selected'], $data['use_key'] ? $key : $value ) ?>><?php echo esc_html( $value ); ?></option>
         <?php endforeach; ?>

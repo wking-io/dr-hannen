@@ -1,0 +1,66 @@
+@import './modules/pattern.css';
+@import './modules/aspect.css';
+@import './modules/select.css';
+@import './modules/post-nav.css';
+
+@screen lg {
+  .product {
+    width: calc(50% - theme('spacing.8'));
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .product {
+    width: calc(100% / 3 - theme('spacing.8'));
+  }
+}
+
+.product-banner {
+  min-height: 400px;
+}
+
+.product-banner .banner__overlay {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(theme('colors.brand.navy'), 0.9) 40%,
+    rgba(theme('colors.brand.navy'), 0.65) 70%,
+    rgba(theme('colors.brand.navy'), 0.4)
+  );
+}
+
+@screen md {
+  .product-banner .banner__overlay {
+    background-image: linear-gradient(
+      to right,
+      rgba(theme('colors.brand.navy'), 0.9) 40%,
+      rgba(theme('colors.brand.navy'), 0.65) 70%,
+      rgba(theme('colors.brand.navy'), 0)
+    );
+  }
+}
+
+.add_to_cart_button {
+  @apply uppercase text-sm font-bold flex items-center bg-brand-navy text-white py-1 px-2 rounded relative z-50 flex items-center;
+}
+
+.woocommerce-loop-product__title {
+  @apply font-bold px-6 pt-6 text-xl;
+}
+
+.attachment-woocommerce_thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.category-active {
+  background-image: linear-gradient(rgba(theme('colors.white'), 0.2), rgba(theme('colors.white'), 0.2));
+}
+
+.page-numbers {
+  @apply flex items-center justify-between;
+}
+
+.page-numbers .next,
+.page-numbers .prev {
+  @apply flex-1 uppercase text-sm font-bold bg-transparent text-brand-navy py-1 px-2 rounded border border-brand-navy;
+}

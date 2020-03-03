@@ -14,6 +14,10 @@ remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 )
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 add_action( 'woocommerce_archive_description', 'woocommerce_catalog_ordering', 90 );
 
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
+ 
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
+
 add_shortcode( 'dr_cart_button', 'dr_cart_button' );
 
 function dr_cart_button() {
@@ -47,4 +51,27 @@ function dr_cart_button_base($url = '', $count = 0) {
       <span class="font-base ml-2"><?php echo $count; ?></span>
     </a>
   <?php endif; return ob_get_clean();
+}
+
+add_action('woocommerce_after_shop_loop_item', 'dr_product_open_actions', 9);
+add_action('woocommerce_after_shop_loop_item', 'dr_product_link_action', 11);
+add_action('woocommerce_after_shop_loop_item', 'dr_product_close_actions', 12);
+
+function dr_product_open_actions() {
+  ob_start(); ?>
+    <div class="flex p-6">
+  <?php echo ob_get_clean();
+}
+
+function dr_product_link_action() {
+  $link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
+  ob_start(); ?>
+    <a class="uppercase underline text-sm font-bold flex items-center bg-transparent text-grey-500 py-1 px-2 rounded ml-4 relative z-50 flex items-center" href="<?php echo $link ?>">Learn More</a>
+  <?php echo ob_get_clean();
+}
+
+function dr_product_close_actions() {
+  ob_start(); ?>
+    </div>
+  <?php echo ob_get_clean();
 }

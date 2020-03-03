@@ -3,6 +3,7 @@
     @apply hidden;
   }
 
+  .aspect-2\:1,
   .aspect-16\:9,
   .aspect-5\:3,
   .aspect-4\:3,
@@ -10,6 +11,7 @@
     position: relative;
   }
 
+  .aspect-2\:1::before,
   .aspect-16\:9::before,
   .aspect-5\:3::before,
   .aspect-4\:3::before,
@@ -17,6 +19,10 @@
     content: "";
     display: block;
     width: 100%;
+  }
+
+  .aspect-2\:1::before {
+    padding-top: calc((1 / 2) * 100%);
   }
 
   .aspect-16\:9::before {

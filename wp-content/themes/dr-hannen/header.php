@@ -117,7 +117,7 @@ $maybe_pattern = is_page_template( 'templates/clinics.php' ) || is_page_template
 					</div>
 				</div>
 
-				<button class="menu-button uppercase text-sm font-bold flex items-center bg-gradient-dark text-white py-1 px-2 rounded ml-4 relative z-50" aria-expanded="false" aria-controls="masthead">
+				<button class="menu-button uppercase text-sm font-bold flex items-center bg-gradient-dark text-white py-1 px-2 rounded ml-4 relative z-50 border border-brand-navy" aria-expanded="false" aria-controls="masthead">
 					<span>Menu</span>
 					<span class="menu-toggle">
 						<span></span>
