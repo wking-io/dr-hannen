@@ -126,5 +126,6 @@ $maybe_pattern = is_page_template( 'templates/clinics.php' ) || is_page_template
 					</span>
 				</button>
 			</nav><!-- #site-navigation -->
+			<?php echo do_shortcode("[dr_cart_button]"); ?>
 		</div>
 	</header><!-- #masthead -->

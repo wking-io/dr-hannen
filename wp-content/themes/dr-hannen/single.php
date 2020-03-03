@@ -26,10 +26,24 @@ get_header();
       <div class="uppercase tracking-wide font-bold flex items-center">
         <p>Share:</p>
         <ul class="flex items-center">
-          <li class="h-4 ml-4"><a href="" class="text-black hover:text-brand-cyan"><?php dh_display_twitter(); ?></a></li>
-          <li class="h-4 ml-4"><a href="" class="text-black hover:text-brand-cyan"><?php dh_display_insta(); ?></a></li>
-          <li class="h-4 ml-4"><a href="" class="text-black hover:text-brand-cyan"><?php dh_display_facebook(); ?></a></li>
-          <li class="h-4 ml-4"><a href="" class="text-black hover:text-brand-cyan"><?php dh_display_pinterest(); ?></a></li>
+          <li class="h-4 ml-4">
+            <a
+              href="http://twitter.com/home?status=<?php the_title(); ?>+<?php echo urlencode( get_the_permalink() );?>"
+              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false;"
+              class="text-black hover:text-brand-cyan"><?php dh_display_twitter(); ?></a>
+          </li>
+          <li class="h-4 ml-4">
+            <a
+              href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php the_title(); ?>&amp;p[url]=<?php echo urlencode( get_the_permalink() );?>&amp;p[images][0]=<?php echo esc_attr( get_the_post_thumbnail_url() ); ?>"
+              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600'); return false;"
+              class="text-black hover:text-brand-cyan"><?php dh_display_facebook(); ?></a>
+          </li>
+          <li class="h-4 ml-4">
+            <a
+              href="http://pinterest.com/pin/create/link/?media=<?php echo urlencode( get_the_post_thumbnail_url() ); ?>&amp;url=<?php echo urlencode( get_the_permalink() );?>&amp;is_video=false&amp;description=<?php echo urlencode( get_the_title() ); ?>"
+              onclick="javascript:window.open(this.href, '_blank', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false;"
+              class="text-black hover:text-brand-cyan"><?php dh_display_pinterest(); ?></a>
+          </li>
         </ul>
       </div>
     </div>

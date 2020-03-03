@@ -6,6 +6,7 @@ function dh_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'woocommerce' );
 	register_nav_menus( array(
 		'menu-main' => esc_html__( 'Primary', THEME_NAME ),
 		'menu-footer' => esc_html__( 'Footer', THEME_NAME ),

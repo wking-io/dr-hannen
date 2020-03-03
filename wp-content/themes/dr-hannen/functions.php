@@ -40,3 +40,6 @@ include 'inc/cloudinary.php';
 
 // Form functions
 include 'inc/forms.php';
+
+// Woocommerce
+include 'inc/woo.php';
