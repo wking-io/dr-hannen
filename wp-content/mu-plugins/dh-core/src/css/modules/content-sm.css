@@ -52,24 +52,20 @@
 
 @screen sm {
   .dh-content blockquote > p {
-    @apply text-xl;
+    @apply text-lg;
   }
 }
 
 @screen md {
   .dh-content h2 {
-    @apply text-3xl;
-  }
-
-  .dh-content h3 {
     @apply text-2xl;
   }
 
-  .dh-content h4 {
+  .dh-content h3 {
     @apply text-xl;
   }
 
-  .dh-content > p {
+  .dh-content h4 {
     @apply text-lg;
   }
 

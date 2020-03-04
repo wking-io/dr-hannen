@@ -76,6 +76,8 @@ if ( ! function_exists( 'dh_styles' ) ) :
 			wp_enqueue_style('dh_search');
 		elseif ( is_shop() || is_product_category() ) :
 			wp_enqueue_style('dh_shop');
+			elseif ( is_product() ) :
+				wp_enqueue_style('dh_product');
 		elseif ( is_page() && ! is_page_template() ) :
 			wp_enqueue_style('dh_page');
 		endif;
