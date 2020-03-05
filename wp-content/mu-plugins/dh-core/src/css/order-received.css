@@ -1,0 +1,28 @@
+.woocommerce ul.order_details {
+  @apply mt-6;
+}
+
+.woocommerce table.shop_table {
+  @apply mt-6;
+  border: 1px solid theme('colors.grey.400');
+  border-collapse: collapse;
+}
+
+.woocommerce table.shop_table td {
+  border-top: 1px solid theme('colors.grey.400');
+}
+
+.woocommerce table.shop_table tfoot tr td,
+.woocommerce table.shop_table tfoot tr th {
+  border-top: 1px solid theme('colors.grey.400');
+}
+
+.woocommerce table.shop_table tfoot tr:last-child td,
+.woocommerce table.shop_table tfoot tr:last-child th {
+  border-top: 1px solid theme('colors.grey.200');
+  background-color: theme('colors.grey.200');
+}
+
+.woocommerce-order-details__title {
+  @apply font-bold text-xl;
+}

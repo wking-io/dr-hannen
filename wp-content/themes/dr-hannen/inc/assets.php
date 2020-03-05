@@ -80,6 +80,8 @@ if ( ! function_exists( 'dh_styles' ) ) :
 			wp_enqueue_style('dh_product');
 		elseif ( is_cart() ) :
 			wp_enqueue_style('dh_cart');
+		elseif ( is_wc_endpoint_url( 'order-received' ) ) :
+			wp_enqueue_style('dh_order_received');
 		elseif ( is_checkout() ) :
 			wp_enqueue_style('dh_checkout');
 		elseif ( is_page() && ! is_page_template() ) :
