@@ -33,3 +33,11 @@
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover {
   @apply bg-brand-blue;
 }
+
+.cart_totals h2 {
+  @apply font-bold text-xl;
+}
+
+.woocommerce-cart .cart-collaterals .cart_totals table {
+  @apply mt-4;
+}

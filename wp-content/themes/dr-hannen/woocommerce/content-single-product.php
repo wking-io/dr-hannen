@@ -32,7 +32,7 @@ if ( post_password_required() ) {
 }
 
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'flex lg:flex-wrap flex-col lg:flex-row lg:items-start lg:justify-between max-w-4xl w-4/5 mx-auto mt-20 md:mt-24 lg:mt-32 pb-12 md:pb-16 lg:pb-24', $product ); ?>>
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'flex lg:flex-wrap flex-col lg:flex-row lg:items-start lg:justify-between max-w-4xl w-5/6 mx-auto mt-20 md:mt-24 lg:mt-32 pb-12 md:pb-16 lg:pb-24', $product ); ?>>
 
 	<div class="product-image flex flex-col">
 		<?php
