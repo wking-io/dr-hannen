@@ -34,7 +34,7 @@ $banner = get_field( 'banner', get_option( 'woocommerce_shop_page_id' ) );
 
 ?>
 
-<section class="w-11/12 mx-auto rounded overflow-hidden mt-8 dh-shadow">
+<section class="w-5/6 md:w-11/12 mx-auto rounded overflow-hidden mt-8 dh-shadow">
 	<div class="product-banner flex flex-col relative text-white">
 		<div class="absolute inset-0 top-0 left-0">
 			<?php echo wp_get_attachment_image( $banner['image'], 'large', false, array( 'class' => 'w-full h-full object-cover' ) ); ?>
@@ -49,7 +49,7 @@ $banner = get_field( 'banner', get_option( 'woocommerce_shop_page_id' ) );
 </section>
 
 
-<section class="w-11/12 mx-auto <?php echo is_paged() ? 'mt-16' : 'mt-16 md:mt-24'; ?> pb-24" id="products">
+<section class="w-5/6 md:w-11/12 mx-auto <?php echo is_paged() ? 'mt-16' : 'mt-16 md:mt-24'; ?> pb-24" id="products">
 	<header class="flex flex-col md:flex-row justify-between items-center">
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 			<h1 class="capitalize text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">Dr. Hannen Health Products</h1>

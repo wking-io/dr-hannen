@@ -1,0 +1,55 @@
+.woocommerce table.shop_table {
+  border: 1px solid theme('colors.grey.400');
+  border-collapse: collapse;
+}
+
+.woocommerce table.shop_table td {
+  border-top: 1px solid theme('colors.grey.400');
+}
+
+.woocommerce table.shop_table tfoot tr:last-child td,
+.woocommerce table.shop_table tfoot tr:last-child th {
+  border-top: 1px solid theme('colors.grey.200');
+  background-color: theme('colors.grey.200');
+}
+
+.woocommerce .place-order .button.alt {
+  @apply bg-brand-cyan;
+}
+
+.woocommerce .place-order .button.alt:hover {
+  @apply bg-brand-blue;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+  @apply border border-black rounded p-2 text-sm mt-1;
+}
+
+.select2-container--default .select2-selection--single {
+  @apply border border-black rounded text-sm;
+}
+
+.woocommerce-checkout h3 {
+  @apply font-bold text-2xl mt-8;
+}
+
+.woocommerce-checkout h3 span {
+  @apply text-lg pl-4;
+}
+
+.woocommerce-checkout .woocommerce-checkout-review-order {
+  @apply mt-4;
+}
+
+.woocommerce-checkout #payment.woocommerce-checkout-payment {
+  @apply bg-grey-100;
+}
+
+.woocommerce-checkout .woocommerce-info {
+  @apply bg-grey-200 border-t-4 border-brand-cyan;
+}
+
+.woocommerce-checkout .woocommerce-info:before {
+  @apply text-brand-cyan;
+}

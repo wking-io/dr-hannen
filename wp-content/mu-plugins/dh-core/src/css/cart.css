@@ -1,0 +1,35 @@
+.woocommerce table.shop_table {
+  border: 1px solid theme('colors.grey.400');
+}
+
+.woocommerce table.shop_table td {
+  border-top: 1px solid theme('colors.grey.400');
+}
+
+.woocommerce table.shop_table tbody tr:last-child td,
+.woocommerce table.shop_table tbody tr:last-child th {
+  border-top: 1px solid theme('colors.grey.200');
+  background-color: theme('colors.grey.200');
+}
+
+.woocommerce table.shop_table .button {
+  @apply bg-transparent text-black rounded flex-shrink-0 text-sm;
+  border: 1px solid theme('colors.black');
+}
+
+.woocommerce-cart .cart .actions .coupon {
+  @apply flex;
+}
+
+.woocommerce-cart table.cart td.actions .coupon .input-text {
+  @apply rounded flex-1 text-sm;
+  border: 1px solid theme('colors.grey.200');
+}
+
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+  @apply bg-brand-cyan;
+}
+
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover {
+  @apply bg-brand-blue;
+}
