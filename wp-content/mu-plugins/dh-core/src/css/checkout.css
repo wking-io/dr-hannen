@@ -26,8 +26,17 @@
   @apply border border-black rounded p-2 text-sm mt-1;
 }
 
+.woocommerce-checkout #payment.woocommerce-checkout-payment div.payment_box input[type="tel"],
+.woocommerce-checkout #payment.woocommerce-checkout-payment div.payment_box input[type="text"] {
+  @apply border border-black rounded p-2 text-sm mt-1;
+}
+
 .select2-container--default .select2-selection--single {
   @apply border border-black rounded text-sm;
+}
+
+.woocommerce-checkout #payment .form-row select {
+  @apply border border-black rounded bg-white;
 }
 
 .woocommerce-checkout h3 {
@@ -52,4 +61,17 @@
 
 .woocommerce-checkout .woocommerce-info:before {
   @apply text-brand-cyan;
+}
+
+.woocommerce-checkout #payment.woocommerce-checkout-payment .payment_methods label {
+  @apply items-center;
+  display: inline-flex;
+}
+
+.woocommerce-checkout #payment.woocommerce-checkout-payment .payment_methods .payment_box {
+  @apply bg-white;
+}
+
+.woocommerce-checkout #payment.woocommerce-checkout-payment .payment_methods .payment_box:before {
+  border-bottom-color: theme('colors.white');
 }
