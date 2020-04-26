@@ -19,7 +19,7 @@ function setup_cloudinary() {
     $api =  $cloudinary_info['user'];
     $secret = $cloudinary_info['pass'];
 
-    if ( ! empty( $name ) && ! empty( $api ) && ! empty( $secret ) ) :
+    if ( ! empty( $name ) && ! empty( $api ) && ! empty( $secret ) && class_exists('Cloudinary') ) :
 
       \Cloudinary::config(array( 
         "cloud_name" => $name, 

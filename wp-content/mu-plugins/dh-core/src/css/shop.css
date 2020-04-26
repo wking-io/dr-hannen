@@ -45,7 +45,7 @@
   }
 }
 
-.add_to_cart_button {
+.woocommerce .product a.add_to_cart_button {
   @apply uppercase text-sm font-bold flex items-center bg-brand-navy text-white py-1 px-2 rounded relative z-50 flex items-center border border-brand-navy;
 }
 
