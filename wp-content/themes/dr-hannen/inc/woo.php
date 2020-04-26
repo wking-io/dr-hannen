@@ -66,6 +66,7 @@ function dr_product_open_actions() {
 }
 
 function dr_product_link_action() {
+  global $product;
   $link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
   ob_start(); ?>
     <a class="uppercase underline text-sm font-bold flex items-center bg-transparent text-grey-500 py-1 px-2 rounded ml-4 relative z-50 flex items-center" href="<?php echo $link ?>">Learn More</a>

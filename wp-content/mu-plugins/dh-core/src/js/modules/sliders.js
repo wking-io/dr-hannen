@@ -15,7 +15,7 @@ export function marquee(context, speed) {
     pauseOnFocus: false,
     pauseOnHover: false,
     swipe: false,
-    touchMove: false
+    touchMove: false,
   });
 }
 
@@ -29,6 +29,21 @@ export function media(context) {
     dots: false,
     variableWidth: true,
     prevArrow: `${context} .button-prev`,
-    nextArrow: `${context} .button-next`
+    nextArrow: `${context} .button-next`,
+  });
+}
+
+export function productSlider(context) {
+  jQuery(`${context} .woocommerce-product-gallery__wrapper`).slick({
+    infinite: true,
+    slidesToShow: 1,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    speed: 500,
+    dots: true,
+    variableWidth: false,
+    prevArrow: `${context} .button-prev`,
+    nextArrow: `${context} .button-next`,
   });
 }

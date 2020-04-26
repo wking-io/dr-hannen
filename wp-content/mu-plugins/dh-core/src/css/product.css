@@ -187,3 +187,10 @@
     width: calc(100% / 3 - theme('spacing.8'));
   }
 }
+
+.product .slick-slider.slick-dotted {
+  @apply m-0;
+}
+.product .slick-dots {
+  bottom: 5px;
+}

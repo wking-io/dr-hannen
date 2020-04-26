@@ -142,8 +142,8 @@ class DhCore {
       wp_register_style('dh_search', $this->get_asset_url( 'css/search.css' ), array(), '1.0.0' );
       wp_register_style('dh_shop', $this->get_asset_url( 'css/shop.css' ), array(), '1.1.0' );
       wp_register_style('dh_product', $this->get_asset_url( 'css/product.css' ), array(), '1.1.0' );
-      wp_register_style('dh_cart', $this->get_asset_url( 'css/cart.css' ), array(), '1.0.0' );
-      wp_register_style('dh_checkout', $this->get_asset_url( 'css/checkout.css' ), array(), '1.0.0' );
+      wp_register_style('dh_cart', $this->get_asset_url( 'css/cart.css' ), array(), '1.1.0' );
+      wp_register_style('dh_checkout', $this->get_asset_url( 'css/checkout.css' ), array(), '1.1.0' );
       wp_register_style('dh_order_received', $this->get_asset_url( 'css/order-received.css' ), array(), '1.0.0' );
     }
 
@@ -162,6 +162,7 @@ class DhCore {
       wp_register_script('dh_media', $this->get_asset_url( 'js/media.js' ), array( 'jquery' ), '1.0.0', true );
       wp_register_script('dh_about', $this->get_asset_url( 'js/about.js' ), array( 'jquery' ), '1.0.0', true );
       wp_register_script('dh_category', $this->get_asset_url( 'js/category.js' ), array(), '1.0.0', true );
+      wp_register_script('dh_product', $this->get_asset_url( 'js/product.js' ), array(), '1.0.0', true );
     }
 
     /**
