@@ -49,11 +49,11 @@
   @apply uppercase text-sm font-bold flex items-center bg-brand-navy text-white py-1 px-2 rounded relative z-50 flex items-center border border-brand-navy;
 }
 
-.added_to_cart {
+.woocommerce .product a.added_to_cart {
   @apply uppercase text-sm font-bold flex items-center bg-transparent text-brand-navy py-1 px-2 rounded relative z-50 flex items-center border border-brand-navy;
 }
 
-.add_to_cart_button.added {
+.woocommerce .product a.add_to_cart_button.added {
   @apply hidden;
 }
 

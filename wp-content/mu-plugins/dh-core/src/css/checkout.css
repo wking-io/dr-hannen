@@ -3,7 +3,9 @@
   border-collapse: collapse;
 }
 
-.woocommerce table.shop_table td {
+.woocommerce table.shop_table td,
+.woocommerce table.shop_table tfoot th,
+.woocommerce table.shop_table tfoot td {
   border-top: 1px solid theme('colors.grey.400');
 }
 

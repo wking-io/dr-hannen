@@ -22,7 +22,7 @@
 }
 
 .woocommerce-cart table.cart td.actions .coupon .input-text {
-  @apply rounded flex-1 text-sm;
+  @apply rounded flex-1 text-sm w-full;
   border: 1px solid theme('colors.grey.200');
 }
 
