@@ -12,9 +12,14 @@
   background-color: theme('colors.grey.200');
 }
 
-.woocommerce table.shop_table .button {
+.woocommerce table.shop_table .button,
+.woocommerce .woocommerce-message .button {
   @apply bg-transparent text-black rounded flex-shrink-0 text-sm;
   border: 1px solid theme('colors.black');
+}
+
+.woocommerce .woocommerce-message .button:hover {
+  @apply bg-transparent text-black;
 }
 
 .woocommerce-cart .cart .actions .coupon {
@@ -40,4 +45,13 @@
 
 .woocommerce-cart .cart-collaterals .cart_totals table {
   @apply mt-4;
+}
+
+.woocommerce .woocommerce-message {
+  @apply bg-grey-200 border-t-4 border-brand-cyan text-black font-bold rounded;
+  line-height: 33px;
+}
+
+.woocommerce .woocommerce-message:before {
+  @apply text-brand-cyan;
 }

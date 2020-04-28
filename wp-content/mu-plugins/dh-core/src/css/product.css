@@ -186,6 +186,11 @@
   .related.products .product {
     width: calc(100% / 3 - theme('spacing.8'));
   }
+
+  .woocommerce .product a.add_to_cart_button,
+  .woocommerce .product a.added_to_cart {
+    @apply text-xs;
+  }
 }
 
 .product .slick-slider.slick-dotted {
