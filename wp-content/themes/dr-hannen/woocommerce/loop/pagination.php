@@ -29,6 +29,6 @@ if ( $total <= 1 ) {
 }
 ?>
 <nav class="post-nav flex items-center justify-between mt-12 p-0">
-  <?php next_posts_link( 'Older Articles' ); ?>
-  <?php previous_posts_link( 'Newer Articles' ); ?>
+  <?php next_posts_link( 'More Products' ); ?>
+  <?php previous_posts_link( 'Previous Products' ); ?>
 </nav>
