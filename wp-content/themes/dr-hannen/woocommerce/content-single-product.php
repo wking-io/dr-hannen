@@ -32,71 +32,76 @@ if ( post_password_required() ) {
 }
 
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'flex lg:flex-wrap flex-col lg:flex-row lg:items-start lg:justify-between max-w-4xl w-5/6 mx-auto mt-20 md:mt-24 lg:mt-32 pb-12 md:pb-16 lg:pb-24', $product ); ?>>
-
-	<div class="product-image flex flex-col">
-		<?php
-		/**
-		 * Hook: woocommerce_before_single_product_summary.
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		do_action( 'woocommerce_before_single_product_summary' );
-		?>
-		<div class="uppercase tracking-wide font-bold flex items-center mt-4 self-end lg:self-start">
-			<p>Share:</p>
-			<ul class="flex items-center">
-				<li class="h-4 ml-4">
-					<a
-						href="http://twitter.com/home?status=<?php the_title(); ?>+<?php echo urlencode( get_the_permalink() );?>"
-						onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false;"
-						class="text-black hover:text-brand-cyan"><?php dh_display_twitter(); ?></a>
-				</li>
-				<li class="h-4 ml-4">
-					<a
-						href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php the_title(); ?>&amp;p[url]=<?php echo urlencode( get_the_permalink() );?>&amp;p[images][0]=<?php echo esc_attr( get_the_post_thumbnail_url() ); ?>"
-						onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600'); return false;"
-						class="text-black hover:text-brand-cyan"><?php dh_display_facebook(); ?></a>
-				</li>
-				<li class="h-4 ml-4">
-					<a
-						href="http://pinterest.com/pin/create/link/?media=<?php echo urlencode( get_the_post_thumbnail_url() ); ?>&amp;url=<?php echo urlencode( get_the_permalink() );?>&amp;is_video=false&amp;description=<?php echo urlencode( get_the_title() ); ?>"
-						onclick="javascript:window.open(this.href, '_blank', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false;"
-						class="text-black hover:text-brand-cyan"><?php dh_display_pinterest(); ?></a>
-				</li>
-			</ul>
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'max-w-4xl w-5/6 mx-auto mt-20 md:mt-24 lg:mt-32 pb-12 md:pb-16 lg:pb-24', $product ); ?>>
+	<div class="dh-breadcrumb text-sm">
+		<?php woocommerce_breadcrumb( array( 'delimiter' => '  /  ' ) ); ?>
+	</div>
+	<div class="flex lg:flex-wrap flex-col lg:flex-row lg:items-start lg:justify-between mt-8">
+		<div class="product-image flex flex-col">
+			<?php
+			/**
+			 * Hook: woocommerce_before_single_product_summary.
+			 *
+			 * @hooked woocommerce_show_product_sale_flash - 10
+			 * @hooked woocommerce_show_product_images - 20
+			 */
+			do_action( 'woocommerce_before_single_product_summary' );
+			?>
+			<div class="uppercase tracking-wide font-bold flex items-center mt-4 self-end lg:self-start">
+				<p>Share:</p>
+				<ul class="flex items-center">
+					<li class="h-4 ml-4">
+						<a
+							href="http://twitter.com/home?status=<?php the_title(); ?>+<?php echo urlencode( get_the_permalink() );?>"
+							onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false;"
+							class="text-black hover:text-brand-cyan"><?php dh_display_twitter(); ?></a>
+					</li>
+					<li class="h-4 ml-4">
+						<a
+							href="http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php the_title(); ?>&amp;p[url]=<?php echo urlencode( get_the_permalink() );?>&amp;p[images][0]=<?php echo esc_attr( get_the_post_thumbnail_url() ); ?>"
+							onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600'); return false;"
+							class="text-black hover:text-brand-cyan"><?php dh_display_facebook(); ?></a>
+					</li>
+					<li class="h-4 ml-4">
+						<a
+							href="http://pinterest.com/pin/create/link/?media=<?php echo urlencode( get_the_post_thumbnail_url() ); ?>&amp;url=<?php echo urlencode( get_the_permalink() );?>&amp;is_video=false&amp;description=<?php echo urlencode( get_the_title() ); ?>"
+							onclick="javascript:window.open(this.href, '_blank', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false;"
+							class="text-black hover:text-brand-cyan"><?php dh_display_pinterest(); ?></a>
+					</li>
+				</ul>
+			</div>
 		</div>
-	</div>
 
-	<div class="summary entry-summary">
+		<div class="summary entry-summary">
+			<?php
+			/**
+			 * Hook: woocommerce_single_product_summary.
+			 *
+			 * @hooked woocommerce_template_single_title - 5
+			 * @hooked woocommerce_template_single_rating - 10
+			 * @hooked woocommerce_template_single_price - 10
+			 * @hooked woocommerce_template_single_excerpt - 20
+			 * @hooked woocommerce_template_single_add_to_cart - 30
+			 * @hooked woocommerce_template_single_meta - 40
+			 * @hooked woocommerce_template_single_sharing - 50
+			 * @hooked WC_Structured_Data::generate_product_data() - 60
+			 */
+			do_action( 'woocommerce_single_product_summary' );
+			?>
+		</div>
+
 		<?php
 		/**
-		 * Hook: woocommerce_single_product_summary.
+		 * Hook: woocommerce_after_single_product_summary.
 		 *
-		 * @hooked woocommerce_template_single_title - 5
-		 * @hooked woocommerce_template_single_rating - 10
-		 * @hooked woocommerce_template_single_price - 10
-		 * @hooked woocommerce_template_single_excerpt - 20
-		 * @hooked woocommerce_template_single_add_to_cart - 30
-		 * @hooked woocommerce_template_single_meta - 40
-		 * @hooked woocommerce_template_single_sharing - 50
-		 * @hooked WC_Structured_Data::generate_product_data() - 60
+		 * @hooked woocommerce_output_product_data_tabs - 10
+		 * @hooked woocommerce_upsell_display - 15
+		 * @hooked woocommerce_output_related_products - 20
 		 */
-		do_action( 'woocommerce_single_product_summary' );
+		do_action( 'woocommerce_after_single_product_summary' );
 		?>
 	</div>
 
-	<?php
-	/**
-	 * Hook: woocommerce_after_single_product_summary.
-	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
-	 */
-	do_action( 'woocommerce_after_single_product_summary' );
-	?>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

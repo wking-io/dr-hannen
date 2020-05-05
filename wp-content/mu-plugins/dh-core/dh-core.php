@@ -141,7 +141,7 @@ class DhCore {
       wp_register_style('dh_single', $this->get_asset_url( 'css/single.css' ), array(), '1.0.0' );
       wp_register_style('dh_search', $this->get_asset_url( 'css/search.css' ), array(), '1.0.0' );
       wp_register_style('dh_shop', $this->get_asset_url( 'css/shop.css' ), array(), '1.1.1' );
-      wp_register_style('dh_product', $this->get_asset_url( 'css/product.css' ), array(), '1.2.1' );
+      wp_register_style('dh_product', $this->get_asset_url( 'css/product.css' ), array(), '1.2.2' );
       wp_register_style('dh_cart', $this->get_asset_url( 'css/cart.css' ), array(), '1.2.0' );
       wp_register_style('dh_checkout', $this->get_asset_url( 'css/checkout.css' ), array(), '1.1.0' );
       wp_register_style('dh_order_received', $this->get_asset_url( 'css/order-received.css' ), array(), '1.0.0' );

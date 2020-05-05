@@ -111,3 +111,11 @@ function dr_get_gallery_image_html( $attachment_id, $main_image = false ) {
 
 	return '<div data-thumb="' . esc_url( $thumbnail_src[0] ) . '" data-thumb-alt="' . esc_attr( $alt_text ) . '" class="woocommerce-product-gallery__image"><a target="_blank" href="' . esc_url( $full_src[0] ) . '">' . $image . '</a></div>';
 }
+
+/**
+ * Replace the home link URL
+ */
+add_filter( 'woocommerce_breadcrumb_home_url', 'dh_breadrumb_home_url' );
+function dh_breadrumb_home_url() {
+    return home_url('/shop');
+}

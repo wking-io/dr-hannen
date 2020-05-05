@@ -77,10 +77,13 @@ $banner = get_field( 'banner', get_option( 'woocommerce_shop_page_id' ) );
 			 */
 			do_action( 'woocommerce_before_shop_loop' ); ?>
 
-			<div class="flex flex-col-reverse md:flex-row mt-8 md:mt-12 items-start">
+			<div class="flex flex-col md:flex-row mt-8 md:mt-12 items-start">
 					<aside class="w-full md:max-w-xs flex-shrink-0 md:mr-8 rounded dh-shadow bg-brand-navy p-4 mt-8 md:mt-0">
 						<p class="uppercase text-white p-4">Product Categories</p>
 						<ul class="flex flex-col">
+							<li>
+								<a class="block text-white font-bold rounded p-4 <?php echo is_shop() ? "category-active" : ""; ?>" href="<?php echo home_url( '/shop#products' ); ?>">All Products</a>
+							</li>
 							<?php foreach ( $product_categories as $category ) : if ($category->slug !== 'uncategorized') : ?>
 								<li>
 									<a class="block text-white font-bold rounded p-4 <?php echo is_product_category( $category->slug ) ? "category-active" : ""; ?>" href="<?php echo get_term_link( $category ); ?>#products"><?php echo $category->name; ?></a>

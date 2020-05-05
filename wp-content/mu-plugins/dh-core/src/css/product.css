@@ -126,6 +126,14 @@
   @apply mt-12 font-extrabold text-2xl;
 }
 
+.dh-breadcrumb a {
+  @apply text-brand-cyan;
+}
+
+.dh-breadcrumb a:hover {
+  @apply underline text-brand-blue;
+}
+
 @screen md {
   .product_title {
     @apply text-3xl;
