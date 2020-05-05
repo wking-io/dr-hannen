@@ -51,7 +51,7 @@
 }
 
 .single_add_to_cart_button {
-  @apply uppercase font-bold items-center bg-brand-navy text-white py-3 px-4 rounded z-50 flex-shrink-0 shadow-md;
+  @apply uppercase font-bold items-center bg-brand-navy text-white py-3 px-4 rounded z-10 flex-shrink-0 shadow-md;
   line-height: 1.35;
 }
 
