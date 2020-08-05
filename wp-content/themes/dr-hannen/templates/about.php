@@ -55,7 +55,7 @@ get_header(); ?>
           <?php echo $consult['form_box']['content']; ?>
         </div>
         <p class="mt-8">
-          <a href="<?php echo $consult['form_box']['button']['link']; ?>" class="bg-gradient text-white font-bold py-3 px-12 rounded"><?php echo $consult['form_box']['button']['text']; ?></a>
+          <a href="<?php echo $consult['form_box']['button']['consult_button_link']; ?>" class="bg-gradient text-white font-bold py-3 px-12 rounded"><?php echo $consult['form_box']['button']['consult_button_text']; ?></a>
         </p>
       </div>
     </div>
@@ -76,7 +76,7 @@ get_header(); ?>
           <?php echo $survey['form_box']['content']; ?>
         </div>
         <p class="mt-8">
-          <a href="<?php echo $survey['form_box']['button']['link']; ?>" class="bg-gradient text-white font-bold py-3 px-12 rounded"><?php echo $survey['form_box']['button']['text']; ?></a>
+          <a href="<?php echo $survey['form_box']['button']['survey_button_link']; ?>" class="bg-gradient text-white font-bold py-3 px-12 rounded"><?php echo $survey['form_box']['button']['survey_button_text']; ?></a>
         </p>
       </div>
     </div>
