@@ -7,6 +7,9 @@ function setup_cloudinary() {
 
   if ( is_plugin_active( 'cloudinary-image-management-and-manipulation-in-the-cloud-cdn/cloudinary.php' ) ) :
 
+    require_once( get_template_directory() . '/inc/cloudinary/autoload.php' );
+    require_once( get_template_directory() . '/inc/cloudinary/src/Helpers.php' );
+
     $cloudinary_url_raw = get_option( 'cloudinary_url' );
 
     if ( false === $cloudinary_url_raw ) :
@@ -14,20 +17,13 @@ function setup_cloudinary() {
       return;
     endif;
 
-    $cloudinary_info = parse_url( $cloudinary_url_raw );
-    $name = $cloudinary_info['host'];
-    $api =  $cloudinary_info['user'];
-    $secret = $cloudinary_info['pass'];
+    if ( ! empty( $cloudinary_url_raw ) && class_exists('Cloudinary') ) :
 
-    if ( ! empty( $name ) && ! empty( $api ) && ! empty( $secret ) && class_exists('Cloudinary') ) :
-
-      \Cloudinary::config(array( 
-        "cloud_name" => $name, 
-        "api_key" => $api, 
-        "api_secret" => $secret, 
-      ));
+      \Cloudinary::config_from_url( $cloudinary_url_raw );
+      error_log( print_r( function_exists( 'cl_video_tag' ), true ) );
 
     else :
+      error_log( print_r( $secret, true ) );
 
       error_log( 'Failed to parse Cloudinary URL.' );
 

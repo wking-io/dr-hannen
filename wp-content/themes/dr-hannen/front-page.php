@@ -46,21 +46,21 @@ endif;
       <div class="hero-video relative md:aspect-16:9" data-video-state="">
         <div class="md:aspect-content">
           <?php 
-            echo cl_video_tag( $hero['video'], 
-              array(
-                "autoplay" => true,
-                "muted" => true,
-                "preload" => true,
-                "fallback_content" => "Your browser does not support HTML5 video tags",
-                "width" => 1440,
-                "crop" => "fit",
-                "id" => "hero-video",
-                "class" => "hidden md:block hero-video-frame w-full"
-              )
-            ); 
+            // echo cl_video_tag( $hero['video'], 
+            //   array(
+            //     "autoplay" => true,
+            //     "muted" => true,
+            //     "preload" => true,
+            //     "fallback_content" => "Your browser does not support HTML5 video tags",
+            //     "width" => 1440,
+            //     "crop" => "fit",
+            //     "id" => "hero-video",
+            //     "class" => "hidden md:block hero-video-frame w-full"
+            //   )
+            // );
           ?>
           <?php echo wp_get_attachment_image( $hero['background'], 'large', false, array( 'class' => 'hero-video-img object-cover w-full h-full absolute inset-0 z-10 hidden md:block' ) ); ?><?php echo wp_get_attachment_image( $hero['background_mobile'], 'large', false, array( 'class' => 'hero-video-img object-cover w-full h-full absolute inset-0 z-10 md:hidden' ) ); ?>
-          <div class="hero-video-after md:opacity-0 text-white pt-40 pb-12 px-8 md:p-12 lg:p-20 xl:py-32 flex flex-col items-start justify-end relative md:absolute inset-0 z-20">
+          <div class="hero-video-after text-white pt-40 pb-12 px-8 md:p-12 lg:p-20 xl:py-32 flex flex-col items-start justify-end relative md:absolute inset-0 z-20">
             <h3 class="hidden md:block font-bold text-sm md:text-xl uppercase tracking-wide"><?php echo $hero['subheading']; ?></h3>
             <h2 class="font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-4 md:mt-1 leading-tight"><?php echo $hero['heading']; ?></h2>
             <p class="md:text-xl mt-4 md:mt-8"><?php echo $hero['show_times']; ?></p>
