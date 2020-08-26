@@ -1,5 +1,89 @@
 @import './modules/content.css';
 
+.dh-content .wp-block-column:first-child > p,
+.dh-content .wp-block-column:first-child .wp-block-group {
+  @apply mt-6 leading-relaxed text-grey-600;
+}
+
+.dh-content .wp-block-column:first-child h2,
+.dh-content .wp-block-column:first-child h3,
+.dh-content .wp-block-column:first-child h4 {
+  @apply mt-12 font-extrabold;
+}
+
+.dh-content .wp-block-column:first-child h2 {
+  @apply text-2xl;
+}
+
+.dh-content .wp-block-column:first-child blockquote {
+  @apply pl-6 py-1 border-l-2 border-grey-500 mt-6;
+}
+
+.dh-content .wp-block-column:first-child blockquote > p {
+  @apply text-lg leading-relaxed;
+}
+
+.dh-content .wp-block-column:first-child blockquote > cite {
+  @apply font-bold not-italic mt-4 block;
+}
+
+.dh-content .wp-block-column:first-child ul {
+  @apply list-disc ml-8 mb-8 mt-8;
+}
+
+.dh-content .wp-block-column:first-child ol {
+  @apply list-decimal ml-8 mb-8 mt-8;
+}
+
+.dh-content .wp-block-column:first-child li {
+  @apply mb-4;
+}
+
+.dh-content .wp-block-column:first-child img {
+  @apply w-full;
+}
+
+.dh-content .wp-block-column:first-child a {
+  @apply underline text-brand-cyan;
+}
+
+.dh-content .wp-block-column:first-child .wp-block-image .alignleft,
+.dh-content .wp-block-column:first-child .wp-block-image .alignright {
+  @apply float-none m-0 mb-8;
+}
+
+@screen sm {
+  .dh-content .wp-block-column:first-child blockquote > p {
+    @apply text-xl;
+  }
+}
+
+@screen md {
+  .dh-content .wp-block-column:first-child h2 {
+    @apply text-3xl;
+  }
+
+  .dh-content .wp-block-column:first-child h3 {
+    @apply text-2xl;
+  }
+
+  .dh-content .wp-block-column:first-child h4 {
+    @apply text-xl;
+  }
+
+  .dh-content .wp-block-column:first-child > p {
+    @apply text-lg;
+  }
+
+  .dh-content .wp-block-column:first-child .wp-block-image .alignleft {
+    @apply float-left w-1/2 m-8 ml-0;
+  }
+
+  .dh-content .wp-block-column:first-child .wp-block-image .alignright {
+    @apply float-right w-1/2 m-8 mr-0;
+  }
+}
+
 .gform_heading,
 .validation_error,
 .gform_validation_container {
@@ -11,11 +95,11 @@
 }
 
 .gform_body {
-  @apply flex flex-col pt-16;
+  @apply flex flex-col;
 }
 
 .gform_body .gform_fields {
-  @apply mx-0 list-none;
+  @apply m-0 list-none;
 }
 
 .gform_fields:first-child {
@@ -23,7 +107,7 @@
 }
 
 .gform_fields:last-child {
-  @apply flex flex-col flex-1 mt-6;
+  @apply flex flex-col flex-1;
 }
 
 .gform_fields:last-child .gfield:first-child {
@@ -44,11 +128,11 @@
 }
 
 .gform_fields:first-child input {
-  @apply border-b border-brand-cyan w-full py-4 text-xl;
+  @apply border-b border-brand-cyan w-full py-4;
 }
 
 .gform_fields:last-child .textarea {
-  @apply text-xl py-4 w-full border-b border-brand-cyan;
+  @apply py-4 w-full border-b border-brand-cyan;
 }
 
 .gfield_label {
@@ -113,19 +197,10 @@
 }
 
 .ui-datepicker-header {
-  background-color: #666; /* set the header background color */
-  color: #e0e0e0;
+  background-color: #ffffff; /* set the header background color */
   font-weight: bold;
-  -webkit-box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, .2);
-  -moz-box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, .2);
-  box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, .2);
-  text-shadow: 1px -1px 0px #000;
-  filter: dropshadow(color=#000, offx=1, offy=-1);
   line-height: 30px;
   min-height: 30px !important;
-  border-width: 1px 0 0 0;
-  border-style: solid;
-  border-color: #666;
 }
 
 .ui-datepicker-title {
@@ -160,16 +235,7 @@
 }
 
 .ui-datepicker thead {
-  background: #f7f7f7;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMWYxZjEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #f7f7f7 0%, #f1f1f1 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #f1f1f1));
-  background: -webkit-linear-gradient(top, #f7f7f7 0%, #f1f1f1 100%);
-  background: -o-linear-gradient(top, #f7f7f7 0%, #f1f1f1 100%);
-  background: -ms-linear-gradient(top, #f7f7f7 0%, #f1f1f1 100%);
-  background: linear-gradient(to bottom, #f7f7f7 0%, #f1f1f1 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#f1f1f1', GradientType=0);
-  border-bottom: 1px solid #bbb;
+  background: #ffffff;
 }
 
 .ui-datepicker th {
@@ -177,9 +243,6 @@
   text-align: center;
   font-size: 6pt;
   padding: 5px 0;
-  color: #666666;
-  text-shadow: 1px 0px 0px #fff;
-  filter: dropshadow(color=#fff, offx=1, offy=0);
 }
 
 .ui-datepicker tbody td {
@@ -208,46 +271,22 @@
   width: 30px;
   height: 30px;
   line-height: 30px;
-  color: #666666;
-  text-shadow: 1px 1px 0px #fff;
-  filter: dropshadow(color=#fff, offx=1, offy=1);
 }
 
 .ui-datepicker-calendar .ui-state-default {
-  background: #ededed;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VkZWRlZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZWRlZGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #ededed 0%, #dedede 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ededed), color-stop(100%, #dedede));
-  background: -webkit-linear-gradient(top, #ededed 0%, #dedede 100%);
-  background: -o-linear-gradient(top, #ededed 0%, #dedede 100%);
-  background: -ms-linear-gradient(top, #ededed 0%, #dedede 100%);
-  background: linear-gradient(to bottom, #ededed 0%, #dedede 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dedede', GradientType=0);
-  -webkit-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
-  -moz-box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
-  box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
+  @apply bg-white;
 }
 
 .ui-datepicker-calendar .ui-state-hover {
-  background: #f7f7f7;
+  @apply bg-grey-200;
 }
 
 .ui-datepicker-calendar .ui-state-active {
-  background: #fff2aa; /* set the active date background color */
-  border: 1px solid #c19163; /* set the active date border color */
-  color: #666; /* set the active date font color */
-  -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
-  -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
-  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
-  text-shadow: 0px 1px 0px #fff;
-  filter: dropshadow(color=#FFF, offx=0, offy=1);
-  position: relative;
-  margin: -1px;
+  @apply bg-brand-cyan text-white;
 }
 
 .ui-datepicker-unselectable .ui-state-default {
-  background: #f4f4f4;
-  color: #b4b3b3;
+  @apply bg-white;
 }
 
 .ui-datepicker-calendar td:first-child .ui-state-active {
@@ -266,7 +305,7 @@
 }
 
 td.ui-datepicker-unselectable.ui-state-disabled {
-  background-color: #d7d7d7;
+  @apply bg-grey-100;
 }
 
 table.ui-datepicker-calendar {

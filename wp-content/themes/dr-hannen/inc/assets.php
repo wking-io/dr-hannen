@@ -71,7 +71,7 @@ if ( ! function_exists( 'dh_styles' ) ) :
 			wp_enqueue_style('dh_media');
 		elseif ( is_page_template( 'templates/about.php' ) ) :
 			wp_enqueue_style('dh_about');
-		elseif ( is_page( 'teladoc' ) ) :
+		elseif ( is_page_template( 'templates/teladoc.php' ) ) :
 			wp_enqueue_style('dh_teladoc');
 		elseif ( is_home() ) :
 			wp_enqueue_style('dh_blog');
