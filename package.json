@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
-    "ajv": "6.8.1",
+    "ajv": "6.12.3",
     "autoprefixer": "8.5.0",
     "babel-core": "6.26.3",
     "babel-eslint": "8.2.3",
